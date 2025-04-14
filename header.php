@@ -30,8 +30,9 @@ if (!defined('ABSPATH')) {
         }
         ?>
       </div>
-
-      <h1><?php bloginfo('name'); ?></h1>
+      <div class='header-title'>
+        <h1><?php bloginfo('name'); ?></h1>
+      </div>
       <nav class="header-nav">
         <?php
         wp_nav_menu(array(

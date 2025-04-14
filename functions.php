@@ -23,9 +23,26 @@ function revup_register_menus()
   register_nav_menus(array(
     'header-menu' => __('Header Menu'),
     'footer-menu' => __('Footer Menu'),
+    'services-menu' => __('Services Menu'),
   ));
 }
 add_action('init', 'revup_register_menus');
+
+// Menu icon string
+function revup_add_menu_icon_field($item_id, $item, $depth, $args)
+{
+  $icon = get_post_meta($item_id, '_menu_item_icon', true);
+?>
+  <p class="field-icon description description-wide">
+    <label for="edit-menu-item-icon-<?php echo $item_id; ?>">
+      <?php _e('Icon (Font Awesome or SVG)'); ?><br>
+      <input type="text" id="edit-menu-item-icon-<?php echo $item_id; ?>" class="widefat edit-menu-item-icon" name="menu-item-icon[<?php echo $item_id; ?>]" value="<?php echo esc_attr($icon); ?>" />
+    </label>
+  </p>
+<?php
+}
+add_action('wp_nav_menu_item_custom_fields', 'revup_add_menu_icon_field', 10, 4);
+
 
 // Styles and Scripts
 function revup_enqueue_styles()

@@ -21,6 +21,7 @@ get_header();
     </div>
   </section>
 
+  <?php the_content(); ?>
 
   <section class="benefits">
     <div class="container">

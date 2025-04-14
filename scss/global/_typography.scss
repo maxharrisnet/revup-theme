@@ -72,6 +72,31 @@ li {
 	padding: 0;
 }
 
+nav ul {
+	display: flex;
+	flex-direction: row;
+	padding: $spacing-md 0;
+	justify-content: space-between;
+	align-items: space-between;
+	gap: $spacing-xl;
+
+	li {
+		display: inline-flex;
+		align-items: center;
+
+		a {
+			font-family: $font-heading;
+			font-size: $font-size-body;
+			font-weight: 700;
+			text-decoration: none;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+}
+
 @container (min-width: #{$container-md}) {
 	main {
 		text-align: left;

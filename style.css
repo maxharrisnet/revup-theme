@@ -64,14 +64,14 @@ h3,
 h4,
 .paragraph-title {
   font-weight: 300;
-  font-size: 26px;
+  font-size: 17px;
   line-height: 28px;
   letter-spacing: 0px;
 }
 
 p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 28px;
   letter-spacing: 0px;
 }
@@ -93,6 +93,28 @@ ul {
 li {
   margin: 0;
   padding: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 32px;
+}
+nav ul li {
+  display: inline-flex;
+  align-items: center;
+}
+nav ul li a {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #3399ff;
 }
 
 @container (min-width: 768px) {
@@ -123,6 +145,7 @@ body {
 }
 
 header.main-header {
+  display: flex;
   position: fixed;
   background-color: #ffffff;
   box-shadow: 0px 4px 13px 0px rgba(26, 77, 128, 0.2);
@@ -145,21 +168,10 @@ header.main-header .header-container .logo {
   color: #2d63b4;
   text-decoration: none;
 }
-header.main-header .header-container .header-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-header.main-header .header-container .header-nav ul a {
-  font-family: "Open Sans", sans-serif;
-  font-size: 26px;
-  color: #3399ff;
-  text-decoration: none;
-}
-header.main-header .header-container .header-nav ul a:hover {
-  color: #3399ff;
+@container (min-width: 768px) {
+  header.main-header .header-container .header-title {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -173,20 +185,74 @@ header.main-header .header-container .header-nav ul a:hover {
     padding: 20px 24px;
   }
 }
+footer.main-footer .container.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+@container (min-width: $container-md) {
+  footer.main-footer .container.footer-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+footer.main-footer .container.footer-container > div {
+  width: 100%;
+}
+footer.main-footer .container.footer-container .footer-logo {
+  font-family: "Nunito", sans-serif;
+  font-size: 38px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+footer.main-footer .container.footer-container .footer-links {
+  display: flex;
+  gap: 20px;
+}
+footer.main-footer .container.footer-container .footer-links a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+}
+footer.main-footer .container.footer-container .footer-links a:hover {
+  color: #3399ff;
+}
+footer.main-footer .container.footer-container .subfooter {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  border-top: 1px solid rgba(135, 135, 135, 0.14);
+}
+
 button,
-.button {
+a.button,
+.button a {
   display: inline-block;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  font-size: 17px;
+  font-size: "Open Sans", sans-serif;
   line-height: 21px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.36px;
   text-align: center;
   vertical-align: middle;
   border-radius: 10px;
   border: 2px solid #3399ff;
   padding: 8px 15px;
   width: auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+button:hover,
+a.button:hover,
+.button a:hover {
+  background-color: #3399ff;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .button-primary {
@@ -206,6 +272,7 @@ button,
 }
 .button-secondary:hover {
   background-color: rgb(45, 99, 180);
+  border-color: rgb(45, 99, 180);
   color: #ffffff;
 }
 
@@ -234,6 +301,11 @@ button,
 }
 .cta .cta-body .button {
   display: inline-block;
+}
+
+#wpadminbar {
+  top: revert;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

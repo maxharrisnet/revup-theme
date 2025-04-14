@@ -6,6 +6,7 @@ body {
 }
 
 header.main-header {
+	display: flex;
 	position: fixed;
 	background-color: $white;
 	box-shadow: $drop-shadow;
@@ -29,22 +30,9 @@ header.main-header {
 			text-decoration: none;
 		}
 
-		.header-nav ul {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			gap: 20px;
-
-			a {
-				font-family: $font-body;
-				font-size: $font-size-sm;
-				color: $secondary-color;
-				text-decoration: none;
-
-				&:hover {
-					color: $secondary-color;
-				}
+		@container (min-width: #{$container-md}) {
+			.header-title {
+				display: none;
 			}
 		}
 	}

@@ -11,10 +11,12 @@ Version: 1.0
 
 @use 'layout/_layout';
 @use 'layout/_header';
-// @use 'layout/_footer';
+@use 'layout/_footer';
 
 @use 'components/_button';
 @use 'components/_hero';
 @use 'components/_cta';
 @use 'components/_faq';
 // @use 'components/_map';
+
+@use '_admin';

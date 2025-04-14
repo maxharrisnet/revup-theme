@@ -1,19 +1,28 @@
 @use '../global/variables' as *;
 
 button,
-.button {
+a.button,
+.button a {
 	display: inline-block;
 	font-family: $font-heading;
 	font-weight: 700;
-	font-size: 17px;
+	font-size: $font-body;
 	line-height: 21px;
-	letter-spacing: 0.3px;
+	letter-spacing: $letter-spacing-tight;
 	text-align: center;
 	vertical-align: middle;
 	border-radius: $border-radius;
 	border: 2px solid $secondary-color;
 	padding: $spacing-sm $spacing-md;
 	width: auto;
+	transition: all $transition;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $secondary-color;
+		color: $white;
+		text-decoration: none;
+	}
 }
 
 .button-primary {
@@ -34,6 +43,7 @@ button,
 
 	&:hover {
 		background-color: $tertiary-color;
+		border-color: $tertiary-color;
 		color: $white;
 	}
 }

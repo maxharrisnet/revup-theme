@@ -1,14 +1,21 @@
 @use '../global/variables' as *;
 
 footer.main-footer {
-	.footer-container {
+	.container.footer-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding: 20px;
-		background-color: $dark-background-color;
-		color: $white;
+
+		@container (min-width: $container-md) {
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		> div {
+			width: 100%;
+		}
 
 		.footer-logo {
 			font-family: $font-heading;
@@ -25,7 +32,6 @@ footer.main-footer {
 			a {
 				font-family: $font-body;
 				font-size: $font-size-sm;
-				color: $white;
 				text-decoration: none;
 
 				&:hover {
@@ -34,7 +40,13 @@ footer.main-footer {
 			}
 		}
 
-		.sub-footer {
+		.subfooter {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: $spacing-xxl 0;
+			// width: 100%;
 			border-top: 1px solid rgba(135, 135, 135, 0.14);
 		}
 	}
