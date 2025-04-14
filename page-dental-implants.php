@@ -18,14 +18,14 @@ get_header();
 <main class="dental-implants">
   <section class="hero">
     <div class="container">
-      <div class="hero-text">
+      <div class="text-container">
         <h1>Dental Implants</h1>
         <h3 class="subheading">in Toronto</h3>
         <p>An Implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help restore the function of your teeth, look good and feel natural.</p>
         <a href="#" class="button button-secondary">Request An Appointment</a>
         <a href="#" class="button button-primary">Call (905) 848 2250</a>
       </div>
-      <div class="hero-image">
+      <div class="image-container">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dental-implants.jpg" alt="Dental Implants">
       </div>
     </div>
@@ -40,7 +40,7 @@ get_header();
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/benefits.jpg" alt="Benefits of Dental Implants">
         </div>
       </div>
-      <div>
+      <div class="text-container">
         <h2>What Are Dental Implants?</h2>
         <p> An implant is a small metal screw that replaces an entire tooth. In a brief surgical procedure, the dentist inserts an implant into the bone beneath your gums right in the spot where a tooth should be. The implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help it look and feel just like a real tooth.</p>
         <p> Getting dental implants is a big deal. You think you might like an implant, but you aren’t sure what to expect. We explain everything here so that you can make an informed decision about your dental treatment.</p>
@@ -51,7 +51,13 @@ get_header();
   <section class="faq">
     <div class="container faq-container">
       <div>
-        <h2>Frequently Asked Questions</h2>
+        <div class="desktop">
+          <h2>Frequently Asked Questions</h2>
+          <p>Do you still have some questions for us? No worries; we’re breaking down some of the most frequently asked questions about dental veneers.</p>
+        </div>
+        <div class="mobile">
+          <h2>FAQ's</h2>
+        </div>
         <div class="faq-list">
           <?php
           $args = array(
@@ -61,7 +67,7 @@ get_header();
           $faqs = new WP_Query($args);
           if ($faqs->have_posts()) :
             while ($faqs->have_posts()) : $faqs->the_post(); ?>
-              <details class="faq-item">
+              <details class="faq-item" open>
                 <summary class="faq-question"><?php the_title(); ?></summary>
                 <div class="faq-answer"><?php the_content(); ?></div>
               </details>
@@ -80,7 +86,7 @@ get_header();
     <div class="container">
       <div class="cta-body">
         <div class="cta-image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cta.jpg" alt="Contact Us">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/dental-chair.svg" alt="Contact Us">
         </div>
         <div class="cta-text">
           <h2>Contact us today</h2>
@@ -92,4 +98,5 @@ get_header();
     </div>
   </section>
 </main>
+
 <?php get_footer(); ?>

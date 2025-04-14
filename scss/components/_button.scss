@@ -3,20 +3,25 @@
 button,
 a.button,
 .button a {
-	display: inline-block;
+	display: block;
 	font-family: $font-heading;
 	font-weight: 700;
 	line-height: 21px;
 	letter-spacing: $letter-spacing-tight;
 	text-align: center;
-	vertical-align: middle;
-	border-radius: $border-radius;
+	// vertical-align: middle;
+	border-radius: $border-radius-xl;
 	border: 2px solid $secondary-color;
 	box-shadow: $drop-shadow-sm;
 	padding: $spacing-sm $spacing-md;
 	width: auto;
 	transition: all $transition;
 	cursor: pointer;
+
+	@container (min-width: #{$container-md}) {
+		display: inline-block;
+		border-radius: $border-radius;
+	}
 
 	&:hover {
 		background-color: $secondary-color;

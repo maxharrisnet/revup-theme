@@ -45,6 +45,13 @@ h4,
 	letter-spacing: $letter-spacing-none;
 }
 
+.paragrah-title {
+}
+
+.desktop-heading {
+	display: none;
+}
+
 p {
 	font-weight: $font-weight-regular;
 	font-size: $font-size-xs;
@@ -74,11 +81,17 @@ li {
 
 nav ul {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding: $spacing-md 0;
 	justify-content: space-between;
-	align-items: space-between;
-	gap: $spacing-xl;
+
+	@container (min-width: #{$container-md}) {
+		flex-direction: row;
+	}
+
+	@container (min-width: #{$container-lg}) {
+		gap: $spacing-xxl;
+	}
 
 	li {
 		display: inline-flex;
@@ -97,8 +110,28 @@ nav ul {
 	}
 }
 
+.text-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	gap: $spacing-lg;
+
+	@container (min-width: #{$container-md}) {
+		text-align: left;
+	}
+}
+
 @container (min-width: #{$container-md}) {
 	main {
 		text-align: left;
+
+		.desktop-heading {
+			display: block;
+		}
+
+		.mobile-heading {
+			display: none;
+		}
 	}
 }

@@ -5,10 +5,8 @@
 	margin: 0 auto;
 	padding: $spacing-lg $spacing-md;
 	width: 100%;
-}
 
-@container (min-width: #{$container-lg}) {
-	.container {
+	@container (min-width: #{$container-lg}) {
 		flex-direction: row;
 		max-width: $container-width;
 		padding: $spacing-xxxl $spacing-xl;
@@ -16,5 +14,29 @@
 		> div {
 			flex: 1;
 		}
+	}
+}
+
+section .container {
+	flex-flow: column;
+
+	@container (min-width: #{$container-md}) {
+		flex-flow: row;
+	}
+}
+
+.desktop {
+	display: none;
+
+	@container (min-width: #{$container-md}) {
+		display: block;
+	}
+}
+
+.mobile {
+	display: block;
+
+	@container (min-width: #{$container-md}) {
+		display: none;
 	}
 }

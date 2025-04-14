@@ -58,9 +58,7 @@
         </nav>
       </div>
     </div>
-
     <div class="footer-mobile-nav">
-      <h3>Services</h3>
       <nav class="footer-subnav">
         <?php
         wp_nav_menu(array(
@@ -70,7 +68,6 @@
         ?>
       </nav>
     </div>
-
     <div class="subfooter">
       <div>
         <p> &copy; <?php echo date('Y'); ?> All Rights Reserved</p>

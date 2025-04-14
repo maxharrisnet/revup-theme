@@ -2,13 +2,33 @@
 
 .cta {
 	.cta-body {
+		display: flex;
+		flex-direction: column;
 		background-color: $accent-color;
 		border-radius: $border-radius-lg;
 		color: $white;
 		padding: $spacing-lg;
+		width: fit-content;
 
-		.button {
-			display: inline-block;
+		@container (min-width: #{$container-md}) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.cta-image {
+			flex: 1 0 auto;
+			padding: $spacing-lg;
+		}
+
+		.cta-text {
+			display: flex;
+			flex-flow: column;
+			gap: $spacing-lg;
+
+			.button {
+				display: inline-block;
+			}
 		}
 	}
 }

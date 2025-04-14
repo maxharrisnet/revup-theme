@@ -17,6 +17,7 @@ html {
 
 body {
   container-type: inline-size;
+  overflow: hidden;
 }
 
 img {
@@ -69,6 +70,10 @@ h4,
   letter-spacing: 0px;
 }
 
+.desktop-heading {
+  display: none;
+}
+
 p {
   font-weight: 400;
   font-size: 14px;
@@ -97,11 +102,19 @@ li {
 
 nav ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 15px 0;
   justify-content: space-between;
-  align-items: space-between;
-  gap: 32px;
+}
+@container (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+  }
+}
+@container (min-width: 992px) {
+  nav ul {
+    gap: 40px;
+  }
 }
 nav ul li {
   display: inline-flex;
@@ -117,9 +130,28 @@ nav ul li a:hover {
   color: #3399ff;
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+}
+@container (min-width: 768px) {
+  .text-container {
+    text-align: left;
+  }
+}
+
 @container (min-width: 768px) {
   main {
     text-align: left;
+  }
+  main .desktop-heading {
+    display: block;
+  }
+  main .mobile-heading {
+    display: none;
   }
 }
 .container {
@@ -128,7 +160,6 @@ nav ul li a:hover {
   padding: 24px 15px;
   width: 100%;
 }
-
 @container (min-width: 992px) {
   .container {
     flex-direction: row;
@@ -139,9 +170,42 @@ nav ul li a:hover {
     flex: 1;
   }
 }
+
+section .container {
+  flex-flow: column;
+}
+@container (min-width: 768px) {
+  section .container {
+    flex-flow: row;
+  }
+}
+
+.desktop {
+  display: none;
+}
+@container (min-width: 768px) {
+  .desktop {
+    display: block;
+  }
+}
+
+.mobile {
+  display: block;
+}
+@container (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+
 body {
   padding-top: 80px;
   container-type: inline-size;
+}
+@media (min-width: 768px) {
+  body {
+    padding-top: 105px;
+  }
 }
 
 header.main-header {
@@ -164,6 +228,7 @@ header.main-header .header-container {
 }
 header.main-header .header-container .logo {
   height: 70px;
+  flex: 0 0 auto;
   display: none;
 }
 header.main-header .header-container .logo img {
@@ -173,29 +238,108 @@ header.main-header .header-container .logo img {
   header.main-header .header-container .logo {
     display: block;
   }
-  header.main-header .header-container .header-title {
+}
+header.main-header .header-container .header-title {
+  color: #2d63b4;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-flow: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 18px;
+  position: relative;
+  padding: 0;
+  z-index: 1100;
+}
+.hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #3399ff;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger-menu span:last-child {
+  margin-bottom: 0;
+}
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+@media (min-width: 768px) {
+  .hamburger-menu {
     display: none;
   }
 }
 
+.header-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 13px 0px rgba(26, 77, 128, 0.2);
+  z-index: 1000;
+  padding: 24px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.header-nav ul.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header-nav ul.nav-links li {
+  margin-bottom: 15px;
+}
+.header-nav ul.nav-links li a {
+  font-family: "Nunito", sans-serif;
+  font-size: 21px;
+  color: #2d63b4;
+  text-decoration: none;
+}
+.header-nav ul.nav-links li a:hover {
+  color: #3399ff;
+}
+.header-nav.active {
+  transform: translateX(0);
+}
 @media (min-width: 768px) {
-  body {
-    padding-top: 105px;
+  .header-nav {
+    display: block;
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    padding: 0;
   }
-  header.main-header {
-    height: 105px;
+  .header-nav ul.nav-links {
+    display: flex;
+    flex-direction: row;
   }
-  header.main-header .header-container {
-    padding: 20px 24px;
+  .header-nav ul.nav-links li {
+    margin: 0 15px;
   }
 }
+
 footer.main-footer .container.footer-container {
   display: flex;
   flex-direction: column;
 }
 @container (min-width: $container-md) {
   footer.main-footer .container.footer-container {
-    flex-direction: column;
     justify-content: space-between;
   }
 }
@@ -227,14 +371,17 @@ footer.main-footer .container.footer-container .footer-links a:hover {
   color: #3399ff;
 }
 footer.main-footer .container.footer-container .footer-subnav-column-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 24px;
+  display: none;
+}
+@container (min-width: 768px) {
+  footer.main-footer .container.footer-container .footer-subnav-column-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 24px;
+  }
 }
 footer.main-footer .container.footer-container .footer-subnav-column-container .footer-subnav-column {
-  column-span: 1;
   display: flex;
   flex-direction: column;
 }
@@ -256,20 +403,27 @@ footer.main-footer .container.footer-container .subfooter {
 button,
 a.button,
 .button a {
-  display: inline-block;
+  display: block;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   line-height: 21px;
   letter-spacing: 0.36px;
   text-align: center;
-  vertical-align: middle;
-  border-radius: 10px;
+  border-radius: 42px;
   border: 2px solid #3399ff;
   box-shadow: 0px 4px 8px 0px rgba(158, 158, 158, 0.199);
   padding: 8px 15px;
   width: auto;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+@container (min-width: 768px) {
+  button,
+  a.button,
+  .button a {
+    display: inline-block;
+    border-radius: 10px;
+  }
 }
 button:hover,
 a.button:hover,
@@ -310,71 +464,95 @@ a.button-secondary:hover {
     grid-template-columns: 1fr 1fr;
   }
 }
-.hero .container > div.hero-text {
+.hero .container > div.text-container {
   order: -1;
-  display: flex;
-  flex-flow: column;
-  gap: 15px;
-  align-items: self-start;
 }
-.hero .container > div.hero-image {
+.hero .container > div.image-container {
   order: 1;
 }
 
 .cta .cta-body {
+  display: flex;
+  flex-direction: column;
   background-color: #56bf68;
   border-radius: 20px;
   color: #ffffff;
   padding: 24px;
+  width: fit-content;
 }
-.cta .cta-body .button {
+@container (min-width: 768px) {
+  .cta .cta-body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.cta .cta-body .cta-image {
+  flex: 1 0 auto;
+  padding: 24px;
+}
+.cta .cta-body .cta-text {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+.cta .cta-body .cta-text .button {
   display: inline-block;
 }
 
-.faq-container {
+.faq {
+  background-color: #ffffff;
+}
+.faq .faq-container {
+  display: flex;
+  flex-direction: column;
+}
+.faq .faq-container .faq-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-.faq-container .faq-list {
-  display: flex;
-}
 @container (min-width: 768px) {
-  .faq-container .faq-list {
+  .faq .faq-container .faq-list {
     flex-flow: row wrap;
     gap: 32px;
   }
 }
-.faq-container .faq-list .faq-item {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.faq .faq-container .faq-list .faq-item {
+  text-align: left;
+  border-radius: 20px;
+  background-color: #f7f9fa;
+  box-shadow: 0px 4px 13px 0px rgba(26, 77, 128, 0.2);
+  overflow: hidden;
 }
 @container (min-width: 768px) {
-  .faq-container .faq-list .faq-item {
+  .faq .faq-container .faq-list .faq-item {
     flex: 1 1 48%;
   }
-  .faq-container .faq-list .faq-item ::marker {
-    content: "";
-    display: none;
-  }
 }
-.faq-container .faq-list .faq-item .faq-question {
+.faq .faq-container .faq-list .faq-item ::marker {
+  content: "";
+  display: none;
+}
+.faq .faq-container .faq-list .faq-item .faq-question {
   font-family: "Nunito", sans-serif;
   font-size: 24px;
   color: #3399ff;
   text-decoration: none;
+  background-color: #ffffff;
+  padding: 15px;
   cursor: pointer;
   flex: 1 1 48%;
 }
-.faq-container .faq-list .faq-item .faq-question:hover {
+.faq .faq-container .faq-list .faq-item .faq-question:hover {
   color: #3399ff;
 }
-.faq-container .faq-list .faq-item .faq-answer p {
+.faq .faq-container .faq-list .faq-item .faq-answer p {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-style: italic;
   line-height: 28px;
+  padding: 15px;
 }
 
 #wpadminbar {

@@ -79,3 +79,8 @@ function revup_enqueue_styles()
   wp_enqueue_style('revup-style', get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'revup_enqueue_styles');
+
+function revup_enqueue_scripts()
+{
+  wp_enqueue_script('revup-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true);
+}

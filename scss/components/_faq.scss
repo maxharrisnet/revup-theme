@@ -1,50 +1,60 @@
 @use '../global/variables' as *;
 
-.faq-container {
-	display: flex;
-	flex-direction: column;
-	gap: $spacing-lg;
+.faq {
+	background-color: $white;
 
-	.faq-list {
+	.faq-container {
 		display: flex;
+		flex-direction: column;
 
-		@container (min-width: #{$container-md}) {
-			flex-flow: row wrap;
-			gap: $spacing-xl;
-		}
-
-		.faq-item {
+		.faq-list {
 			display: flex;
 			flex-direction: column;
-			gap: $spacing-md;
+			gap: $spacing-lg;
 
 			@container (min-width: #{$container-md}) {
-				flex: 1 1 48%;
+				flex-flow: row wrap;
+				gap: $spacing-xl;
+			}
+
+			.faq-item {
+				text-align: left;
+				border-radius: $border-radius-lg;
+				background-color: $background-color;
+				box-shadow: $drop-shadow;
+				overflow: hidden;
+
+				@container (min-width: #{$container-md}) {
+					flex: 1 1 48%;
+				}
 
 				::marker {
 					content: '';
 					display: none;
 				}
-			}
 
-			.faq-question {
-				font-family: $font-heading;
-				font-size: $font-size-lg;
-				color: $secondary-color;
-				text-decoration: none;
-				cursor: pointer;
-				flex: 1 1 48%;
-
-				&:hover {
+				.faq-question {
+					font-family: $font-heading;
+					font-size: $font-size-lg;
 					color: $secondary-color;
-				}
-			}
+					text-decoration: none;
+					background-color: $white;
+					padding: $spacing-md;
+					cursor: pointer;
+					flex: 1 1 48%;
 
-			.faq-answer p {
-				font-family: $font-body;
-				font-size: $font-size-xs;
-				font-style: italic;
-				line-height: $line-height-sm;
+					&:hover {
+						color: $secondary-color;
+					}
+				}
+
+				.faq-answer p {
+					font-family: $font-body;
+					font-size: $font-size-xs;
+					font-style: italic;
+					line-height: $line-height-sm;
+					padding: $spacing-md;
+				}
 			}
 		}
 	}
