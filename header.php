@@ -24,11 +24,11 @@ if (!defined('ABSPATH')) {
   <header class="main-header">
     <div class="container header-container">
       <div class="logo">
-        <?php
-        if (function_exists('the_custom_logo')) {
-          the_custom_logo();
-        }
-        ?>
+
+        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/tomken-logo@2x.png" alt="<?php bloginfo('name'); ?>">
+        </a>
+
       </div>
       <div class='header-title'>
         <h1><?php bloginfo('name'); ?></h1>

@@ -60,11 +60,11 @@
     </div>
 
     <div class="footer-mobile-nav">
-      <h4>Additional Services</h4>
+      <h3>Services</h3>
       <nav class="footer-subnav">
         <?php
         wp_nav_menu(array(
-          'theme_location' => 'services-menu-04',
+          'theme_location' => 'services-menu-mobile',
           'container' => false,
         ));
         ?>

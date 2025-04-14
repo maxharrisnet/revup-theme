@@ -37,7 +37,6 @@ get_header();
       </div>
     </div>
   </section>
-
   <section class="cta">
     <div class="container">
       <div class="cta-body">

@@ -6,7 +6,6 @@ a.button,
 	display: inline-block;
 	font-family: $font-heading;
 	font-weight: 700;
-	font-size: $font-body;
 	line-height: 21px;
 	letter-spacing: $letter-spacing-tight;
 	text-align: center;
@@ -25,7 +24,7 @@ a.button,
 	}
 }
 
-.button-primary {
+a.button-primary {
 	background-color: $white;
 	color: $secondary-color;
 	border-color: $white;
@@ -36,10 +35,10 @@ a.button,
 	}
 }
 
-.button-secondary {
+a.button-secondary {
 	background-color: $accent-color;
 	color: $white;
-	border: 2px solid $accent-color;
+	border-color: $accent-color;
 
 	&:hover {
 		background-color: $tertiary-color;
