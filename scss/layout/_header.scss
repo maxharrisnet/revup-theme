@@ -1,0 +1,46 @@
+@use '../global/variables' as *;
+
+header.main-header {
+	position: fixed;
+	background-color: $white;
+	box-shadow: $drop-shadow;
+	width: 100%;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	.header-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+
+		.logo {
+			font-family: $font-heading;
+			font-size: $font-size-lg;
+			color: $primary-color;
+			text-decoration: none;
+		}
+
+		.header-nav ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+
+			a {
+				font-family: $font-body;
+				font-size: $font-size-sm;
+				color: $secondary-color;
+				text-decoration: none;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}

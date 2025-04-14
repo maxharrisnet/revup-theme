@@ -6,7 +6,9 @@ $secondary-color: #3399ff; // Light Blue
 $tertiary-color: rgba(45, 99, 180, 1); // Dark Blue
 $background-color: #f7f9fa; // Light Gray
 $dark-background-color: #2d2d2d; // Dark Gray
+$border-color: rgba(135, 135, 135, 0.14); // Light Gray
 $accent-color: #56bf68; // Green
+
 $white: #ffffff; // White
 
 // Effect variables
@@ -34,6 +36,11 @@ $line-height-xs: 28px;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-bold: 600;
+$font-weight-black: 700;
+
+// Letter spacing variables
+$letter-spacing-none: 0px;
+$letter-spacing-tight: 0.36px;
 
 // Border radius variables
 $border-radius-sm: 4px; // Small border radius
@@ -41,9 +48,20 @@ $border-radius: 10px; // General border radius
 $border-radius-lg: 20px; // Large border radius
 $border-radius-full: 50%; // Full border radius
 
-// Letter spacing variables
-$letter-spacing-none: 0px;
-$letter-spacing-tight: 0.36px;
-
 // Container variables
 $container-width: 1200px;
+
+// Spacing variables (use t-shirt sizes)
+$spacing-xs: 4px; // Extra small
+$spacing-sm: 8px; // Small
+$spacing-md: 16px; // Medium
+$spacing-lg: 24px; // Large
+$spacing-xl: 32px; // Extra large
+$spacing-xxl: 40px; // Extra extra large
+$spacing-xxxl: 48px; // Extra extra extra large
+
+// Breakpoint variables mobile-first
+$breakpoint-xs: 3750px; // Phone
+$breakpoint-sm: 576px; // Tablet
+$breakpoint-md: 768px; // Desktop
+$breakpoint-lg: 992px; // Large Desktop

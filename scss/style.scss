@@ -10,9 +10,9 @@ Version: 1.0
 @use 'global/_typography';
 
 @use 'layout/_layout';
-// @use 'layout/_header';
+@use 'layout/_header';
 // @use 'layout/_footer';
-// @use 'layout/_section';
+// @use 'layout/_section';`
 
 @use 'components/_buttons';
 // @use 'components/_cta';

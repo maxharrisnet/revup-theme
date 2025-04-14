@@ -4,18 +4,20 @@
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
-// Register theme support for post thumbnails
+
+// Images
 add_theme_support('post-thumbnails');
-// Register theme support for custom logo
+
 add_theme_support('custom-logo', array(
   'height' => 100,
   'width' => 400,
   'flex-height' => true,
   'flex-width' => true,
 ));
-// Register theme support for custom menus
+
+// Menus
 add_theme_support('menus');
-// Register custom menus
+
 function revup_register_menus()
 {
   register_nav_menus(array(
@@ -25,7 +27,7 @@ function revup_register_menus()
 }
 add_action('init', 'revup_register_menus');
 
-// enqueue styles and scripts
+// Styles and Scripts
 function revup_enqueue_styles()
 {
   wp_enqueue_style('revup-style', get_stylesheet_uri());

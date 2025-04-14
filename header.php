@@ -14,15 +14,31 @@ if (!defined('ABSPATH')) {
 <html <?php language_attributes(); ?>>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="<?php bloginfo('charset'); ?>">
   <title><?php bloginfo('name'); ?></title>
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <header>
-    <div class="container">
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <?php
+        if (function_exists('the_custom_logo')) {
+          the_custom_logo();
+        }
+        ?>
+      </div>
+
       <h1><?php bloginfo('name'); ?></h1>
+      <nav class="header-nav">
+        <?php
+        wp_nav_menu(array(
+          'theme_location' => 'header-menu',
+          'container' => false,
+          'items_wrap' => '<ul class="nav-links">%3$s</ul>',
+        ));
+        ?>
     </div>
   </header>

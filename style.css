@@ -1,18 +1,150 @@
-/* Error: Undefined variable.
- *   ,
- * 2 |     max-width: $container-width;
- *   |                ^^^^^^^^^^^^^^^^
- *   '
- *   scss/layout/_layout.scss 2:13  @use
- *   scss/style.scss 12:1           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 2 \2502      max-width: $container-width;\a   \2502                 ^^^^^^^^^^^^^^^^\a   \2575 \a   scss/layout/_layout.scss 2:13  @use\a   scss/style.scss 12:1           root stylesheet";
+/*
+Theme Name: RevUp Dental Test
+Author: Max Harris
+Description: A minimal WordPress theme for the Dental Implants landing page.
+Version: 1.0
+*/
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(45, 99, 180);
+  background-color: #f7f9fa;
+}
+
+h1,
+.page-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 54px;
+  letter-spacing: 0.36px;
+}
+
+h2,
+.section-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 43px;
+  letter-spacing: 0px;
+}
+
+h3,
+.interactive-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: 0px;
+}
+
+h4,
+.paragraph-title {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
+}
+
+a {
+  color: #3399ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header.main-header {
+  position: fixed;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 13px 0px rgba(26, 77, 128, 0.2);
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header.main-header .header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+header.main-header .header-container .logo {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 38px;
+  color: #2d63b4;
+  text-decoration: none;
+}
+header.main-header .header-container .header-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header.main-header .header-container .header-nav ul a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 26px;
+  color: #3399ff;
+  text-decoration: none;
+}
+header.main-header .header-container .header-nav ul a:hover {
+  color: #3399ff;
+}
+
+button,
+.button {
+  display: inline-block;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 10px;
+  border: 2px solid #3399ff;
+  padding: 8px 16px;
+}
+
+/*# sourceMappingURL=style.css.map */
