@@ -1,0 +1,57 @@
+@use 'variables';
+
+body {
+	font-family: variables.$font-body;
+	color: variables.$tertiary-color;
+	background-color: variables.$background-color;
+}
+
+h1,
+.page-title {
+	font-family: variables.$font-heading;
+	font-weight: variables.$font-weight-light;
+	font-size: variables.$font-size-xl;
+	line-height: variables.$line-height-xl;
+	letter-spacing: variables.$letter-spacing-tight;
+}
+
+h2,
+.section-title {
+	font-family: variables.$font-heading;
+	font-weight: variables.$font-weight-regular;
+	font-size: variables.$font-size-lg;
+	line-height: variables.$line-height-lg;
+	letter-spacing: variables.$letter-spacing-none;
+}
+
+h3,
+.interactive-title {
+	font-weight: variables.$font-weight-bold;
+	font-size: variables.$font-size-md;
+	line-height: variables.$line-height-md;
+	letter-spacing: variables.$letter-spacing-none;
+}
+
+h4,
+.paragraph-title {
+	font-weight: variables.$font-weight-light;
+	font-size: variables.$font-size-sm;
+	line-height: variables.$line-height-sm;
+	letter-spacing: variables.$letter-spacing-none;
+}
+
+p {
+	font-weight: variables.$font-weight-regular;
+	font-size: variables.$font-size-xs;
+	line-height: variables.$line-height-xs;
+	letter-spacing: variables.$letter-spacing-none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

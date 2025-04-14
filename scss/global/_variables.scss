@@ -1,0 +1,49 @@
+@use 'fonts';
+
+// Color variables
+$primary-color: #2d63b4; // Blue
+$secondary-color: #3399ff; // Light Blue
+$tertiary-color: rgba(45, 99, 180, 1); // Dark Blue
+$background-color: #f7f9fa; // Light Gray
+$dark-background-color: #2d2d2d; // Dark Gray
+$accent-color: #56bf68; // Green
+$white: #ffffff; // White
+
+// Effect variables
+$drop-shadow: 0px 4px 13px 0px rgba(26, 77, 128, 0.2);
+
+// Font Face variables
+$font-heading: 'Nunito Sans', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+
+// Font size variables
+$font-size-xl: 60px; // Extra large
+$font-size-lg: 38px; // Large
+$font-size-md: 28px; // Medium
+$font-size-sm: 26px; // Small
+$font-size-xs: 18px; // Extra small
+
+// Line height variables
+$line-height-xl: 54px;
+$line-height-lg: 43px;
+$line-height-md: 35px;
+$line-height-sm: 28px;
+$line-height-xs: 28px;
+
+// Font weight variables
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
+
+// Border radius variables
+$border-radius-sm: 4px; // Small border radius
+$border-radius: 10px; // General border radius
+$border-radius-lg: 20px; // Large border radius
+$border-radius-full: 50%; // Full border radius
+
+// Letter spacing variables
+$letter-spacing-none: 0px;
+$letter-spacing-tight: 0.36px;
+
+// Container variables
+$container-width: 1200px;
