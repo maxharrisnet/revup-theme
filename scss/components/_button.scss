@@ -12,6 +12,7 @@ a.button,
 	vertical-align: middle;
 	border-radius: $border-radius;
 	border: 2px solid $secondary-color;
+	box-shadow: $drop-shadow-sm;
 	padding: $spacing-sm $spacing-md;
 	width: auto;
 	transition: all $transition;

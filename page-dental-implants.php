@@ -1,9 +1,19 @@
 <?php
 
 /**
- * Template Name: Dental Implants Landing Page
+ * Template Name: Dental Implants
+ *
+ * @package WordPress
+ * @subpackage RevUp
+ * @since RevUp Theme Version 1.0
  */
+
+if (!defined('ABSPATH')) {
+  exit;
+}
+
 get_header();
+
 ?>
 <main class="dental-implants">
   <section class="hero">

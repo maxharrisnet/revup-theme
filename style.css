@@ -265,6 +265,7 @@ a.button,
   vertical-align: middle;
   border-radius: 10px;
   border: 2px solid #3399ff;
+  box-shadow: 0px 4px 8px 0px rgba(158, 158, 158, 0.199);
   padding: 8px 15px;
   width: auto;
   transition: all 0.3s ease-in-out;
@@ -311,6 +312,10 @@ a.button-secondary:hover {
 }
 .hero .container > div.hero-text {
   order: -1;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  align-items: self-start;
 }
 .hero .container > div.hero-image {
   order: 1;

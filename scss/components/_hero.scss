@@ -6,13 +6,17 @@
 		grid-template-columns: 1fr; // Single column on mobile
 		gap: 1.5rem;
 
-		@media (min-width: $breakpoint-md) {
+		@media (min-width: #{$breakpoint-md}) {
 			grid-template-columns: 1fr 1fr;
 		}
 
 		> div {
 			&.hero-text {
 				order: -1;
+				display: flex;
+				flex-flow: column;
+				gap: $spacing-md;
+				align-items: self-start;
 			}
 
 			&.hero-image {
