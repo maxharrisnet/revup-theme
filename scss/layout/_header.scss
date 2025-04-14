@@ -1,5 +1,10 @@
 @use '../global/variables' as *;
 
+body {
+	padding-top: $header-height;
+	container-type: inline-size;
+}
+
 header.main-header {
 	position: fixed;
 	background-color: $white;
@@ -41,6 +46,20 @@ header.main-header {
 					color: $secondary-color;
 				}
 			}
+		}
+	}
+}
+
+@media (min-width: #{$container-md}) {
+	body {
+		padding-top: $header-height-lg;
+	}
+
+	header.main-header {
+		height: $header-height-lg;
+
+		.header-container {
+			padding: 20px $spacing-lg;
 		}
 	}
 }

@@ -1,0 +1,14 @@
+@use '../global/variables' as *;
+
+.cta {
+	.cta-body {
+		background-color: $accent-color;
+		border-radius: $border-radius-lg;
+		color: $white;
+		padding: $spacing-lg;
+
+		.button {
+			display: inline-block;
+		}
+	}
+}

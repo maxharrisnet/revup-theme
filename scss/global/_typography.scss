@@ -1,54 +1,59 @@
-@use 'variables';
+@use 'variables' as *;
 
 body {
-	font-family: variables.$font-body;
-	color: variables.$tertiary-color;
-	background-color: variables.$background-color;
+	font-family: $font-body;
+	color: $tertiary-color;
+	background-color: $background-color;
+}
+
+main {
+	text-align: center;
 }
 
 h1,
 .page-title {
-	font-family: variables.$font-heading;
-	font-weight: variables.$font-weight-light;
-	font-size: variables.$font-size-xl;
-	line-height: variables.$line-height-xl;
-	letter-spacing: variables.$letter-spacing-tight;
+	font-family: $font-heading;
+	font-weight: $font-weight-light;
+	font-size: $font-size-xl;
+	line-height: $line-height-xl;
+	letter-spacing: $letter-spacing-tight;
 }
 
 h2,
 .section-title {
-	font-family: variables.$font-heading;
-	font-weight: variables.$font-weight-regular;
-	font-size: variables.$font-size-lg;
-	line-height: variables.$line-height-lg;
-	letter-spacing: variables.$letter-spacing-none;
+	font-family: $font-heading;
+	font-weight: $font-weight-regular;
+	font-size: $font-size-lg;
+	line-height: $line-height-lg;
+	letter-spacing: $letter-spacing-none;
 }
 
 h3,
-.interactive-title {
-	font-weight: variables.$font-weight-bold;
-	font-size: variables.$font-size-md;
-	line-height: variables.$line-height-md;
-	letter-spacing: variables.$letter-spacing-none;
+.interactive-title,
+.subheading {
+	font-weight: $font-weight-bold;
+	font-size: $font-size-md;
+	line-height: $line-height-md;
+	letter-spacing: $letter-spacing-none;
 }
 
 h4,
 .paragraph-title {
-	font-weight: variables.$font-weight-light;
-	font-size: variables.$font-size-sm;
-	line-height: variables.$line-height-sm;
-	letter-spacing: variables.$letter-spacing-none;
+	font-weight: $font-weight-light;
+	font-size: $font-size-sm;
+	line-height: $line-height-sm;
+	letter-spacing: $letter-spacing-none;
 }
 
 p {
-	font-weight: variables.$font-weight-regular;
-	font-size: variables.$font-size-xs;
-	line-height: variables.$line-height-xs;
-	letter-spacing: variables.$letter-spacing-none;
+	font-weight: $font-weight-regular;
+	font-size: $font-size-xs;
+	line-height: $line-height-xs;
+	letter-spacing: $letter-spacing-none;
 }
 
 a {
-	color: variables.$secondary-color;
+	color: $secondary-color;
 	text-decoration: none;
 
 	&:hover {
@@ -65,4 +70,10 @@ ul {
 li {
 	margin: 0;
 	padding: 0;
+}
+
+@container (min-width: #{$container-md}) {
+	main {
+		text-align: left;
+	}
 }

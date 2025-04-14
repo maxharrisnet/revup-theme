@@ -15,7 +15,7 @@ $white: #ffffff; // White
 $drop-shadow: 0px 4px 13px 0px rgba(26, 77, 128, 0.2);
 
 // Font Face variables
-$font-heading: 'Nunito Sans', sans-serif;
+$font-heading: 'Nunito', sans-serif;
 $font-body: 'Open Sans', sans-serif;
 
 // Font size variables
@@ -50,18 +50,24 @@ $border-radius-full: 50%; // Full border radius
 
 // Container variables
 $container-width: 1200px;
+$container-xs: 375px;
+$container-sm: 576px;
+$container-md: 768px;
+$container-lg: 992px;
+$header-height: 80px; // Mobile header height
+$header-height-lg: 105px;
 
 // Spacing variables (use t-shirt sizes)
 $spacing-xs: 4px; // Extra small
 $spacing-sm: 8px; // Small
-$spacing-md: 16px; // Medium
+$spacing-md: 15px; // Medium
 $spacing-lg: 24px; // Large
 $spacing-xl: 32px; // Extra large
 $spacing-xxl: 40px; // Extra extra large
 $spacing-xxxl: 48px; // Extra extra extra large
 
 // Breakpoint variables mobile-first
-$breakpoint-xs: 3750px; // Phone
+$breakpoint-xs: 375px; // Phone
 $breakpoint-sm: 576px; // Tablet
 $breakpoint-md: 768px; // Desktop
 $breakpoint-lg: 992px; // Large Desktop
