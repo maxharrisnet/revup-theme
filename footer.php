@@ -2,7 +2,7 @@
   <div class="container footer-container">
     <div>
       <h3>Pages</h3>
-      <nav class="footer-nav">
+      <nav class="footer-subnav">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'footer-menu',
@@ -11,12 +11,60 @@
         ?>
       </nav>
     </div>
-    <div>
-      <h3>Services</h3>
-      <nav class="footer-nav">
+    <h3>Services</h3>
+    <div class="footer-subnav-column-container">
+      <div class="footer-subnav-column">
+        <h4>General Dentistry</h4>
+        <nav class="footer-subnav">
+          <?php
+          wp_nav_menu(array(
+            'theme_location' => 'services-menu-01',
+            'container' => false,
+          ));
+          ?>
+        </nav>
+      </div>
+      <div class="footer-subnav-column">
+        <h4>Cosmetic Dentistry</h4>
+        <nav class="footer-subnav">
+          <?php
+          wp_nav_menu(array(
+            'theme_location' => 'services-menu-02',
+            'container' => false,
+          ));
+          ?>
+        </nav>
+      </div>
+      <div class="footer-subnav-column">
+        <h4>Children’s Dentistry</h4>
+        <nav class="footer-subnav">
+          <?php
+          wp_nav_menu(array(
+            'theme_location' => 'services-menu-03',
+            'container' => false,
+          ));
+          ?>
+        </nav>
+      </div>
+      <div class="footer-subnav-column">
+        <h4>Additional Services</h4>
+        <nav class="footer-subnav">
+          <?php
+          wp_nav_menu(array(
+            'theme_location' => 'services-menu-04',
+            'container' => false,
+          ));
+          ?>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-mobile-nav">
+      <h4>Additional Services</h4>
+      <nav class="footer-subnav">
         <?php
         wp_nav_menu(array(
-          'theme_location' => 'services-menu',
+          'theme_location' => 'services-menu-04',
           'container' => false,
         ));
         ?>

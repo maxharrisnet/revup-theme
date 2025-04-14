@@ -23,7 +23,11 @@ function revup_register_menus()
   register_nav_menus(array(
     'header-menu' => __('Header Menu'),
     'footer-menu' => __('Footer Menu'),
-    'services-menu' => __('Services Menu'),
+    'services-menu-01' => __('Services Menu Col 1'),
+    'services-menu-02' => __('Services Menu Col 2'),
+    'services-menu-03' => __('Services Menu Col 3'),
+    'services-menu-04' => __('Services Menu Col 4'),
+    'services-menu-mobile' => __('Services Menu Mobile'),
   ));
 }
 add_action('init', 'revup_register_menus');
