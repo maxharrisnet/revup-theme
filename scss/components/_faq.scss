@@ -1,0 +1,51 @@
+@use '../global/variables' as *;
+
+.faq-container {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-lg;
+
+	.faq-list {
+		display: flex;
+
+		@container (min-width: #{$container-md}) {
+			flex-flow: row wrap;
+			gap: $spacing-xl;
+		}
+
+		.faq-item {
+			display: flex;
+			flex-direction: column;
+			gap: $spacing-md;
+
+			@container (min-width: #{$container-md}) {
+				flex: 1 1 48%;
+
+				::marker {
+					content: '';
+					display: none;
+				}
+			}
+
+			.faq-question {
+				font-family: $font-heading;
+				font-size: $font-size-lg;
+				color: $secondary-color;
+				text-decoration: none;
+				cursor: pointer;
+				flex: 1 1 48%;
+
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+
+			.faq-answer p {
+				font-family: $font-body;
+				font-size: $font-size-xs;
+				font-style: italic;
+				line-height: $line-height-sm;
+			}
+		}
+	}
+}

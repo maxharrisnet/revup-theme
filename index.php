@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 <main>
   <div class="container">
-    <h1>Welcome to Dental Implants Landing Page</h1>
-    <p>This is a placeholder for the landing page content.</p>
+    <div>
+      <?php the_title('<h1>', '</h1>'); ?>
+      <?php the_content() ?>
+    </div>
   </div>
 </main>
 <?php get_footer(); ?>

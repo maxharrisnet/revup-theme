@@ -47,6 +47,35 @@ get_header();
       </div>
     </div>
   </section>
+
+  <section class="faq">
+    <div class="container faq-container">
+      <div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <?php
+          $args = array(
+            'post_type' => 'faq',
+            'posts_per_page' => -1,
+          );
+          $faqs = new WP_Query($args);
+          if ($faqs->have_posts()) :
+            while ($faqs->have_posts()) : $faqs->the_post(); ?>
+              <details class="faq-item">
+                <summary class="faq-question"><?php the_title(); ?></summary>
+                <div class="faq-answer"><?php the_content(); ?></div>
+              </details>
+            <?php endwhile;
+            wp_reset_postdata();
+          else : ?>
+            <p>No FAQs found.</p>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section class="cta">
     <div class="container">
       <div class="cta-body">

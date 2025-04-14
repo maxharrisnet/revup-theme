@@ -9,11 +9,36 @@ if (!defined('ABSPATH')) {
 add_theme_support('post-thumbnails');
 
 add_theme_support('custom-logo', array(
-  'height' => 100,
+  'height' => 70,
   'width' => 400,
   'flex-height' => true,
   'flex-width' => true,
 ));
+
+// Register FAQ Custom Post Type
+function revup_register_post_types()
+{
+  register_post_type('faq', array(
+    'labels' => array(
+      'name' => __('FAQs'),
+      'singular_name' => __('FAQ'),
+      'add_new' => __('Add New FAQ'),
+      'add_new_item' => __('Add New FAQ'),
+      'edit_item' => __('Edit FAQ'),
+      'new_item' => __('New FAQ'),
+      'view_item' => __('View FAQ'),
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('title', 'editor', 'thumbnail'),
+    'rewrite' => array('slug' => 'faqs'),
+    'menu_icon' => 'dashicons-format-chat',
+    'show_in_rest' => true,
+    'rest_base' => 'faqs',
+  ));
+}
+
+add_action('init', 'revup_register_post_types');
 
 // Menus
 add_theme_support('menus');
