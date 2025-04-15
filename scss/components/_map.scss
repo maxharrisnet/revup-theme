@@ -1,0 +1,17 @@
+@use '../global/variables' as *;
+
+.location-wrapper {
+	background-color: $white;
+	border-radius: $border-radius;
+	display: flex;
+	flex-flow: column;
+	text-align: left;
+	gap: $spacing-lg;
+
+	.location-details {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing-lg;
+		padding: $spacing-lg;
+	}
+}

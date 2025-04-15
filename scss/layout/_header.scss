@@ -52,6 +52,7 @@ header.main-header {
 	flex-flow: column;
 	background: none;
 	border: none;
+	box-shadow: none;
 	cursor: pointer;
 	width: 32px;
 	height: 18px;
@@ -73,6 +74,8 @@ header.main-header {
 	}
 
 	&.active {
+		background-color: transparent;
+
 		span:nth-child(1) {
 			transform: translateY(10px) rotate(45deg);
 		}
@@ -92,7 +95,6 @@ header.main-header {
 }
 
 .header-nav {
-	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -101,7 +103,7 @@ header.main-header {
 	background-color: $white;
 	box-shadow: $drop-shadow;
 	z-index: 1000;
-	padding: $spacing-lg;
+	padding: $spacing-xxxl $spacing-lg;
 	transform: translateX(100%);
 	transition: transform 0.3s ease;
 

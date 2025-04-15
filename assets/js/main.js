@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-	console.log('Big');
 	var hamburgerMenu = document.querySelector('.hamburger-menu');
 	var headerNav = document.querySelector('.header-nav');
 

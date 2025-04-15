@@ -84,6 +84,14 @@ li {
 	padding: 0;
 }
 
+address {
+	font-style: normal;
+}
+
+strong {
+	font-weight: $font-weight-bold;
+}
+
 nav ul {
 	display: flex;
 	flex-direction: column;

@@ -85,8 +85,7 @@ get_header();
     </div>
   </section>
 
-
-  <section class="cta">
+  <section class="cta-section">
     <div class="container">
       <div class="cta-body">
         <div class="cta-image">
@@ -102,6 +101,44 @@ get_header();
         </div>
       </div>
     </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="location-wrapper">
+        <div class="location-details">
+          <address>
+            <p>310 Wellington Rd, London, Ontario, Canada, N6C 4P4</p>
+            <p>226-781-7262</p>
+            <p><a href="mailto:info@wellingtondentistry.ca">info@wellingtondentistry.ca</a></p>
+          </address>
+          <!--  social icons -->
+          <div class=" social-icons">
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/social/mail.svg" alt="Email"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/social/facebook.svg" alt="Facebook"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/social/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/social/instagram.svg" alt="Instagram"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/social/twitter.svg" alt="Twitter"></a>
+          </div>
+          <hr />
+          <!-- Schedule -->
+          <div class=Wellington Dentistry "location-hours">
+            <h3>Office Hours</h3>
+            <ul>
+              <li>Monday: 10am-6pm</li>
+              <li>Tuesday: 11am-7pm</li>
+              <li>Wednesday: 10am-6pm</li>
+              <li>Thursday: 11am-7pm</li>
+              <li>Friday: 10am-3pm</li>
+              <li>Saturday: 10am-3pm</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="location-map">
+          <?php echo do_shortcode('[clinic_location name="Wellington Dentistry" width="100%" height="400px"]'); ?>
+        </div>
+      </div>
   </section>
 </main>
 
