@@ -21,6 +21,7 @@ if (!defined('ABSPATH')) {
 </head>
 
 <body <?php body_class(); ?>>
+  <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e('Skip to content', 'revup'); ?></a>
   <header class="main-header">
     <div class="container header-container">
       <div class="logo">
@@ -47,6 +48,3 @@ if (!defined('ABSPATH')) {
       </nav>
     </div>
   </header>
-</body>
-
-</html>

@@ -26,6 +26,9 @@
 
 				@container (min-width: #{$container-md}) {
 					flex: 1 1 48%;
+					background-color: transparent;
+					box-shadow: none;
+					border-radius: 0;
 				}
 
 				::marker {
@@ -43,17 +46,28 @@
 					cursor: pointer;
 					flex: 1 1 48%;
 
+					@container (min-width: #{$container-md}) {
+						padding: 0;
+					}
+
 					&:hover {
 						color: $secondary-color;
 					}
 				}
 
-				.faq-answer p {
-					font-family: $font-body;
-					font-size: $font-size-xs;
-					font-style: italic;
-					line-height: $line-height-sm;
+				.faq-answer {
 					padding: $spacing-md;
+
+					@container (min-width: #{$container-md}) {
+						padding: 0;
+					}
+
+					p {
+						font-family: $font-body;
+						font-size: $font-size-xs;
+						font-style: italic;
+						line-height: $line-height-sm;
+					}
 				}
 			}
 		}

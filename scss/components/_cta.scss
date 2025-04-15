@@ -32,3 +32,18 @@
 		}
 	}
 }
+
+.inline-cta {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: $spacing-lg;
+
+	@container (min-width: #{$container-md}) {
+		flex-direction: row;
+		gap: $spacing-lg;
+		padding: $spacing-xxl;
+	}
+}

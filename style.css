@@ -25,6 +25,17 @@ img {
   height: auto;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: rgb(45, 99, 180);
@@ -36,8 +47,14 @@ main {
 }
 
 h1,
-.page-title {
+h2,
+h3,
+h4 {
   font-family: "Nunito", sans-serif;
+}
+
+h1,
+.page-title {
   font-weight: 300;
   font-size: 60px;
   line-height: 54px;
@@ -46,7 +63,6 @@ h1,
 
 h2,
 .section-title {
-  font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 43px;
@@ -128,6 +144,23 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #3399ff;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+}
+@container (min-width: 768px) {
+  .heading-container {
+    text-align: left;
+  }
 }
 
 .text-container {
@@ -500,6 +533,22 @@ a.button-secondary:hover {
   display: inline-block;
 }
 
+.inline-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px;
+}
+@container (min-width: 768px) {
+  .inline-cta {
+    flex-direction: row;
+    gap: 24px;
+    padding: 40px;
+  }
+}
+
 .faq {
   background-color: #ffffff;
 }
@@ -528,6 +577,9 @@ a.button-secondary:hover {
 @container (min-width: 768px) {
   .faq .faq-container .faq-list .faq-item {
     flex: 1 1 48%;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
   }
 }
 .faq .faq-container .faq-list .faq-item ::marker {
@@ -544,15 +596,27 @@ a.button-secondary:hover {
   cursor: pointer;
   flex: 1 1 48%;
 }
+@container (min-width: 768px) {
+  .faq .faq-container .faq-list .faq-item .faq-question {
+    padding: 0;
+  }
+}
 .faq .faq-container .faq-list .faq-item .faq-question:hover {
   color: #3399ff;
+}
+.faq .faq-container .faq-list .faq-item .faq-answer {
+  padding: 15px;
+}
+@container (min-width: 768px) {
+  .faq .faq-container .faq-list .faq-item .faq-answer {
+    padding: 0;
+  }
 }
 .faq .faq-container .faq-list .faq-item .faq-answer p {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-style: italic;
   line-height: 28px;
-  padding: 15px;
 }
 
 #wpadminbar {

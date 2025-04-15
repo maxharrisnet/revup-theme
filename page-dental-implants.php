@@ -51,11 +51,11 @@ get_header();
   <section class="faq">
     <div class="container faq-container">
       <div>
-        <div class="desktop">
+        <div class="desktop text-centered">
           <h2>Frequently Asked Questions</h2>
           <p>Do you still have some questions for us? No worries; we’re breaking down some of the most frequently asked questions about dental veneers.</p>
         </div>
-        <div class="mobile">
+        <div class="mobile text-centered">
           <h2>FAQ's</h2>
         </div>
         <div class="faq-list">
@@ -77,6 +77,10 @@ get_header();
             <p>No FAQs found.</p>
           <?php endif; ?>
         </div>
+        <div class="desktop inline-cta ">
+          <h4>Have a Different Question?</h4>
+          <a href="#" class="button ">Ask our Doctor</a>
+        </div>
       </div>
     </div>
   </section>
@@ -89,8 +93,10 @@ get_header();
           <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/dental-chair.svg" alt="Contact Us">
         </div>
         <div class="cta-text">
-          <h2>Contact us today</h2>
-          <h3 class="paragrah-title">to schedule an initial consultation & exam.</h3>
+          <div>
+            <h2>Contact us today</h2>
+            <h3 class="paragrah-title">to schedule an initial consultation & exam.</h3>
+          </div>
           <p>Your consultation will include an examination of everything from your teeth, gums and soft tissues to the shape and condition of your bite. Generally, we want to see how your whole mouth looks and functions. Before we plan your treatment we want to know everything about the health and aesthetic of your smile, and, most importantly, what you want to achieve so we can help you get there.</p>
           <a href="#" class="button button-primary">Book a Consultation</a>
         </div>

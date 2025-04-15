@@ -11,8 +11,14 @@ main {
 }
 
 h1,
-.page-title {
+h2,
+h3,
+h4 {
 	font-family: $font-heading;
+}
+
+h1,
+.page-title {
 	font-weight: $font-weight-light;
 	font-size: $font-size-xl;
 	line-height: $line-height-xl;
@@ -21,7 +27,6 @@ h1,
 
 h2,
 .section-title {
-	font-family: $font-heading;
 	font-weight: $font-weight-regular;
 	font-size: $font-size-lg;
 	line-height: $line-height-lg;
@@ -107,6 +112,22 @@ nav ul {
 				color: $secondary-color;
 			}
 		}
+	}
+}
+
+.text-centered {
+	text-align: center;
+}
+
+.heading-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	gap: $spacing-lg;
+
+	@container (min-width: #{$container-md}) {
+		text-align: left;
 	}
 }
 
