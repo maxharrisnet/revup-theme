@@ -39,10 +39,61 @@ get_header();
       </div>
     </div>
   </section>
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-image">
+        <div class="image-container">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/benefits.png" alt="Benefits of Dental Implants" loading="lazy">
+        </div>
+      </div>
+      <div class="text-container">
+        <h2>What Are Dental Implants?</h2>
+        <p> An implant is a small metal screw that replaces an entire tooth. In a brief surgical procedure, the dentist inserts an implant into the bone beneath your gums right in the spot where a tooth should be. The implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help it look and feel just like a real tooth.</p>
+        <p> Getting dental implants is a big deal. You think you might like an implant, but you aren’t sure what to expect. We explain everything here so that you can make an informed decision about your dental treatment.</p>
+      </div>
+    </div>
+  </section>
 
-  <?php the_content(); ?>
 
-  <section class="benefits">
+  <section class="feature-section">
+    <div class="container">
+      <div class="text-container">
+        <h2>Why You Might Need Dental Implants</h2>
+        <p>Your natural teeth provide support for the height and shape of your smile, and they allow you to eat and speak comfortably.</p>
+        <p>A gap in your smile could allow your other teeth to drift out of healthy functional alignment. If that happens, your risk of developing oral health problems increases. Losing just one tooth can trigger a chain of events in your mouth that negatively impact your oral health, the appearance of your face, and your overall quality of living.</p>
+        <p>Even if you don't experience these effects of missing teeth, there's one problem you can't avoid: bone resorption. This is a natural process in which your body breaks down non-essential bone tissue to use the minerals elsewhere in your body.</p>
+        <p>When you have teeth in your jawbone, they push against it and stimulate the production of new bone tissue. But once those teeth are gone, that bone tissue serves no useful purpose, so it slowly dissolves away. The result? A shortened jaw and chin that cause wrinkles and give your cheeks and lips a sunken appearance.</p>
+        <p>Having dental implants is the second best thing to having natural teeth. You can prevent or correct the issues listed above by replacing lost teeth with implants.</p>
+      </div>
+      <div class="section-image">
+        <div class="image-container">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/benefits.png" alt="Benefits of Dental Implants" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="text-container">
+        <h2>Why You Might Need Dental Implants</h2>
+        <p>A restoration is the “false tooth” that covers the implant. The implant is not visible when you smile, but the restoration that covers it is what makes it look like you have a new tooth.</p>
+        <div class="section-highlight">
+          <p>Dental crown: This is the most common implant restoration, and it covers a single-tooth implant.</p>
+          <p>Dental bridge: A bridge spans the gap in places where multiple teeth in a row are missing. You can replace several teeth with just one or two implants that support a dental bridge. A full implant-supported bridge is an entire arch of upper or lower teeth that are fixed to four or more implants.</p>
+          <p>Implant denture: Give a removable denture more stability by clipping it onto two small implants.</p>
+        </div>
+      </div>
+      <div class="section-image">
+        <div class="image-container">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/benefits.png" alt="Benefits of Dental Implants" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
     <div class="container">
       <div class="section-image">
         <div class="image-container">
@@ -110,10 +161,12 @@ get_header();
             <h3 class="paragraph-title">to schedule an initial consultation & exam.</h3>
           </div>
           <p>Your consultation will include an examination of everything from your teeth, gums and soft tissues to the shape and condition of your bite. Generally, we want to see how your whole mouth looks and functions. Before we plan your treatment we want to know everything about the health and aesthetic of your smile, and, most importantly, what you want to achieve so we can help you get there.</p>
-          <a href="#" class="button button-primary">
-            <span>Book a Consultation</span>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
-          </a>
+          <div class="button-wrapper">
+            <a href="#" class="button button-primary">
+              <span>Book a Consultation</span>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -144,9 +144,10 @@ header.main-header {
 		ul.nav-links {
 			display: flex;
 			flex-direction: row;
+			text-align: center;
 
 			li {
-				margin: 0 $spacing-md;
+				margin: 0;
 			}
 		}
 	}

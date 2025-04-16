@@ -4,10 +4,8 @@ footer.main-footer {
 	.container.footer-container {
 		display: flex;
 		flex-direction: column;
-		// padding: 20px ;
 
 		@container (min-width: $container-md) {
-			// flex-direction: column;
 			justify-content: space-between;
 		}
 
@@ -79,8 +77,6 @@ footer.main-footer {
 			display: flex;
 			flex-flow: row;
 			justify-content: space-between;
-			padding: $spacing-xxl 0;
-			border-top: 1px solid rgba(135, 135, 135, 0.14);
 		}
 	}
 }

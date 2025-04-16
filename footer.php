@@ -72,6 +72,10 @@
         ?>
       </nav>
     </div>
+    <div>
+      <a href="#" class="button">Dental Emergencies</a>
+    </div>
+    <hr />
     <div class="subfooter">
       <div>
         <p> &copy; <?php echo date('Y'); ?> All Rights Reserved</p>
