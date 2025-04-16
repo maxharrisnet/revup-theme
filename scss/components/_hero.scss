@@ -1,10 +1,11 @@
 @use '../global/variables' as *;
 
 .hero {
-	.container {
+	.hero-container {
 		display: grid;
 		grid-template-columns: 1fr; // Single column on mobile
 		gap: 1.5rem;
+		max-width: 100%;
 
 		@media (min-width: #{$breakpoint-md}) {
 			grid-template-columns: 1fr 1fr;

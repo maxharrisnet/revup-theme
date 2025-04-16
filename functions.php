@@ -64,7 +64,7 @@ function revup_add_menu_icon_field($item_id, $item, $depth, $args)
 ?>
   <p class="field-icon description description-wide">
     <label for="edit-menu-item-icon-<?php echo $item_id; ?>">
-      <?php _e('Icon (Font Awesome or SVG)'); ?><br>
+      <?php _e('Icon slug'); ?><br>
       <input type="text" id="edit-menu-item-icon-<?php echo $item_id; ?>" class="widefat edit-menu-item-icon" name="menu-item-icon[<?php echo $item_id; ?>]" value="<?php echo esc_attr($icon); ?>" />
     </label>
   </p>
@@ -72,6 +72,16 @@ function revup_add_menu_icon_field($item_id, $item, $depth, $args)
 }
 add_action('wp_nav_menu_item_custom_fields', 'revup_add_menu_icon_field', 10, 4);
 
+function revup_save_menu_icon($menu_id, $menu_item_db_id)
+{
+  if (isset($_POST['menu-item-icon'][$menu_item_db_id])) {
+    update_post_meta($menu_item_db_id, '_menu_item_icon', sanitize_text_field($_POST['menu-item-icon'][$menu_item_db_id]));
+  }
+}
+add_action('wp_update_nav_menu_item', 'revup_save_menu_icon', 10, 2);
+
+// Icon Walker
+require_once get_template_directory() . '/class-revup-menu-icon-walker.php';
 
 // Styles and Scripts
 function revup_enqueue_styles()
@@ -85,3 +95,19 @@ function revup_enqueue_scripts()
   wp_enqueue_script('revup-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'revup_enqueue_scripts');
+
+
+/**
+ * Register custom blocks
+ */
+function revup_register_blocks()
+{
+  // Check if Gutenberg is active
+  if (!function_exists('register_block_type')) {
+    return;
+  }
+
+  // Register blocks
+  require_once get_template_directory() . '/blocks/explainer-block/explainer-block.php';
+}
+add_action('init', 'revup_register_blocks', 9);

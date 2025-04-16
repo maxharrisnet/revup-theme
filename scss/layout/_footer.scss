@@ -65,6 +65,8 @@ footer.main-footer {
 
 						li {
 							a {
+								display: flex;
+								align-items: center;
 								font-weight: 400;
 							}
 						}
@@ -81,4 +83,15 @@ footer.main-footer {
 			border-top: 1px solid rgba(135, 135, 135, 0.14);
 		}
 	}
+}
+
+.menu-icon {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.menu-icon-svg {
+	width: 20px;
+	height: 20px;
 }

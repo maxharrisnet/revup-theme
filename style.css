@@ -64,8 +64,8 @@ h1,
 h2,
 .section-title {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 43px;
+  font-size: 38px;
+  line-height: 42px;
   letter-spacing: 0px;
 }
 
@@ -73,7 +73,7 @@ h3,
 .interactive-title,
 .subheading {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 35px;
   letter-spacing: 0px;
 }
@@ -82,7 +82,7 @@ h4,
 .paragraph-title {
   font-weight: 400;
   font-size: 21px;
-  line-height: 28px;
+  line-height: 24px;
   letter-spacing: 0px;
 }
 
@@ -92,7 +92,7 @@ h4,
 
 p {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: 0px;
 }
@@ -146,7 +146,7 @@ nav ul li {
 }
 nav ul li a {
   font-family: "Nunito", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -201,14 +201,43 @@ nav ul li a:hover {
   padding: 24px 15px;
   width: 100%;
 }
-@container (min-width: 992px) {
+@container (min-width: 768px) {
   .container {
     flex-direction: row;
     max-width: 1200px;
     padding: 48px 32px;
   }
-  .container > div {
-    flex: 1;
+}
+.container.column {
+  flex-direction: row;
+}
+@container (min-width: 768px) {
+  .container.column {
+    flex-direction: column;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px;
+}
+@container (min-width: 768px) {
+  .step {
+    flex-direction: row;
+    gap: 24px;
+    padding: 40px;
+  }
+}
+.step .step-image {
+  flex: 0 0 auto;
+}
+@container (min-width: 768px) {
+  .step .step-image {
+    flex: 0 0 15%;
   }
 }
 
@@ -392,7 +421,7 @@ footer.main-footer .container.footer-container > div {
 }
 footer.main-footer .container.footer-container .footer-logo {
   font-family: "Nunito", sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   color: #ffffff;
   text-decoration: none;
   margin-bottom: 10px;
@@ -434,6 +463,8 @@ footer.main-footer .container.footer-container .footer-subnav-column-container .
   gap: 15px;
 }
 footer.main-footer .container.footer-container .footer-subnav-column-container .footer-subnav-column .footer-subnav ul li a {
+  display: flex;
+  align-items: center;
   font-weight: 400;
 }
 footer.main-footer .container.footer-container .subfooter {
@@ -442,6 +473,17 @@ footer.main-footer .container.footer-container .subfooter {
   justify-content: space-between;
   padding: 40px 0;
   border-top: 1px solid rgba(135, 135, 135, 0.14);
+}
+
+.menu-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.menu-icon-svg {
+  width: 20px;
+  height: 20px;
 }
 
 button,
@@ -498,24 +540,25 @@ a.button-secondary:hover {
   color: #ffffff;
 }
 
-.hero .container {
+.hero .hero-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
-  .hero .container {
+  .hero .hero-container {
     grid-template-columns: 1fr 1fr;
   }
 }
-.hero .container > div.text-container {
+.hero .hero-container > div.text-container {
   order: -1;
 }
-.hero .container > div.image-container {
+.hero .hero-container > div.image-container {
   order: 1;
 }
 
-.cta .cta-body {
+.cta-section .cta-body {
   display: flex;
   flex-direction: column;
   background-color: #56bf68;
@@ -525,22 +568,22 @@ a.button-secondary:hover {
   width: fit-content;
 }
 @container (min-width: 768px) {
-  .cta .cta-body {
+  .cta-section .cta-body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
-.cta .cta-body .cta-image {
+.cta-section .cta-body .cta-image {
   flex: 1 0 auto;
   padding: 24px;
 }
-.cta .cta-body .cta-text {
+.cta-section .cta-body .cta-text {
   display: flex;
   flex-flow: column;
   gap: 24px;
 }
-.cta .cta-body .cta-text .button {
+.cta-section .cta-body .cta-text .button {
   display: inline-block;
 }
 
@@ -560,25 +603,25 @@ a.button-secondary:hover {
   }
 }
 
-.faq {
+.faq-section {
   background-color: #ffffff;
 }
-.faq .faq-container {
+.faq-section .faq-container {
   display: flex;
   flex-direction: column;
 }
-.faq .faq-container .faq-list {
+.faq-section .faq-container .faq-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 @container (min-width: 768px) {
-  .faq .faq-container .faq-list {
+  .faq-section .faq-container .faq-list {
     flex-flow: row wrap;
     gap: 32px;
   }
 }
-.faq .faq-container .faq-list .faq-item {
+.faq-section .faq-container .faq-list .faq-item {
   text-align: left;
   border-radius: 20px;
   background-color: #f7f9fa;
@@ -586,20 +629,20 @@ a.button-secondary:hover {
   overflow: hidden;
 }
 @container (min-width: 768px) {
-  .faq .faq-container .faq-list .faq-item {
+  .faq-section .faq-container .faq-list .faq-item {
     flex: 1 1 48%;
     background-color: transparent;
     box-shadow: none;
     border-radius: 0;
   }
 }
-.faq .faq-container .faq-list .faq-item ::marker {
+.faq-section .faq-container .faq-list .faq-item ::marker {
   content: "";
   display: none;
 }
-.faq .faq-container .faq-list .faq-item .faq-question {
+.faq-section .faq-container .faq-list .faq-item .faq-question {
   font-family: "Nunito", sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   color: #3399ff;
   text-decoration: none;
   background-color: #ffffff;
@@ -608,26 +651,26 @@ a.button-secondary:hover {
   flex: 1 1 48%;
 }
 @container (min-width: 768px) {
-  .faq .faq-container .faq-list .faq-item .faq-question {
+  .faq-section .faq-container .faq-list .faq-item .faq-question {
     padding: 0;
   }
 }
-.faq .faq-container .faq-list .faq-item .faq-question:hover {
+.faq-section .faq-container .faq-list .faq-item .faq-question:hover {
   color: #3399ff;
 }
-.faq .faq-container .faq-list .faq-item .faq-answer {
+.faq-section .faq-container .faq-list .faq-item .faq-answer {
   padding: 15px;
 }
 @container (min-width: 768px) {
-  .faq .faq-container .faq-list .faq-item .faq-answer {
+  .faq-section .faq-container .faq-list .faq-item .faq-answer {
     padding: 0;
   }
 }
-.faq .faq-container .faq-list .faq-item .faq-answer p {
+.faq-section .faq-container .faq-list .faq-item .faq-answer p {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
-  line-height: 28px;
+  line-height: 24px;
 }
 
 .location-wrapper {
@@ -636,13 +679,32 @@ a.button-secondary:hover {
   display: flex;
   flex-flow: column;
   text-align: left;
+  overflow: hidden;
   gap: 24px;
+  width: 100%;
+}
+@container (min-width: 768px) {
+  .location-wrapper {
+    flex-direction: row;
+  }
 }
 .location-wrapper .location-details {
+  flex: 1 1 48%;
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 24px;
+}
+.location-wrapper .location-map {
+  flex: 1 1 48%;
+  background-color: #2d2d2d;
+}
+.location-wrapper .location-map .clinic-details {
+  display: none;
+}
+
+html {
+  margin-top: 0 !important;
 }
 
 #wpadminbar {

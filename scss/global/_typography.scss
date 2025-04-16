@@ -20,7 +20,7 @@ h4 {
 h1,
 .page-title {
 	font-weight: $font-weight-light;
-	font-size: $font-size-xl;
+	font-size: $font-size-jumbo;
 	line-height: $line-height-xl;
 	letter-spacing: $letter-spacing-tight;
 }
@@ -28,7 +28,7 @@ h1,
 h2,
 .section-title {
 	font-weight: $font-weight-regular;
-	font-size: $font-size-lg;
+	font-size: $font-size-xxxl;
 	line-height: $line-height-lg;
 	letter-spacing: $letter-spacing-none;
 }
@@ -50,17 +50,14 @@ h4,
 	letter-spacing: $letter-spacing-none;
 }
 
-.paragrah-title {
-}
-
 .desktop-heading {
 	display: none;
 }
 
 p {
 	font-weight: $font-weight-regular;
-	font-size: $font-size-xs;
-	line-height: $line-height-xs;
+	font-size: $font-size-body;
+	line-height: $line-height-body;
 	letter-spacing: $letter-spacing-none;
 }
 

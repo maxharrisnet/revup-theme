@@ -20,6 +20,7 @@
           wp_nav_menu(array(
             'theme_location' => 'services-menu-01',
             'container' => false,
+            'walker' => new Revup_Menu_Icon_Walker(),
           ));
           ?>
         </nav>
@@ -31,6 +32,7 @@
           wp_nav_menu(array(
             'theme_location' => 'services-menu-02',
             'container' => false,
+            'walker' => new Revup_Menu_Icon_Walker(),
           ));
           ?>
         </nav>
@@ -42,6 +44,7 @@
           wp_nav_menu(array(
             'theme_location' => 'services-menu-03',
             'container' => false,
+            'walker' => new Revup_Menu_Icon_Walker(),
           ));
           ?>
         </nav>
@@ -53,6 +56,7 @@
           wp_nav_menu(array(
             'theme_location' => 'services-menu-04',
             'container' => false,
+            'walker' => new Revup_Menu_Icon_Walker(),
           ));
           ?>
         </nav>

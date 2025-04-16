@@ -6,13 +6,40 @@
 	padding: $spacing-lg $spacing-md;
 	width: 100%;
 
-	@container (min-width: #{$container-lg}) {
+	@container (min-width: #{$container-md}) {
 		flex-direction: row;
 		max-width: $container-width;
 		padding: $spacing-xxxl $spacing-xl;
+	}
 
-		> div {
-			flex: 1;
+	&.column {
+		flex-direction: row;
+
+		@container (min-width: #{$container-md}) {
+			flex-direction: column;
+		}
+	}
+}
+
+.step {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: $spacing-lg;
+
+	@container (min-width: #{$container-md}) {
+		flex-direction: row;
+		gap: $spacing-lg;
+		padding: $spacing-xxl;
+	}
+
+	.step-image {
+		flex: 0 0 auto;
+
+		@container (min-width: #{$container-md}) {
+			flex: 0 0 15%;
 		}
 	}
 }

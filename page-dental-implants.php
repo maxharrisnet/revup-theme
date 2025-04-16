@@ -17,8 +17,9 @@ get_header();
 ?>
 <main class="dental-implants">
   <section class="hero">
-    <div class="container">
+    <div class="hero-container">
       <div class="text-container">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/smile@2x.png" alt="Dental Implants Icon">
         <h1>Dental Implants</h1>
         <h3 class="subheading">in Toronto</h3>
         <p>An Implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help restore the function of your teeth, look good and feel natural.</p>
@@ -26,7 +27,7 @@ get_header();
         <a href="#" class="button button-primary">Call (905) 848 2250</a>
       </div>
       <div class="image-container">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dental-implants.jpg" alt="Dental Implants">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/dental-implants-hero.png" alt="Dental Implants">
       </div>
     </div>
   </section>
@@ -37,9 +38,9 @@ get_header();
     <div class="container">
       <div class="section-image">
         <div class="image-container">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/benefits.jpg" alt="Benefits of Dental Implants">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/benefits.png" alt="Benefits of Dental Implants" loading="lazy">
         </div>
-      </div>
+      </div>-
       <div class="text-container">
         <h2>What Are Dental Implants?</h2>
         <p> An implant is a small metal screw that replaces an entire tooth. In a brief surgical procedure, the dentist inserts an implant into the bone beneath your gums right in the spot where a tooth should be. The implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help it look and feel just like a real tooth.</p>
@@ -48,7 +49,62 @@ get_header();
     </div>
   </section>
 
-  <section class="faq">
+  <section>
+    <div class="container column">
+      <h2> What To Expect On Your Dental Implant Treatment Journey</h2>
+      <p>The actual implant placement process is much more comfortable than you might imagine.</p>
+
+      <div class="step">
+        <div class="step-image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-dental-chair.svg" alt="Dental Chair Icon">
+        </div>
+        <div class="step-tex">
+          <h3>Preparing your teeth</h3>
+          <p>To make space for your veneer, a thin layer of enamel is removed from the front of your tooth. We numb the area before we start working and the amount of enamel removed is very minimal. Next, we will take an impression of your prepared tooth and it’s neighbours to make sure your veneers fit perfectly and blend in with your smile.</p>
+        </div>
+      </div>
+
+
+      <div class="step">
+        <div class="step-image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-brushing.svg" alt="Toothpaste and Toothbrush Icon">
+        </div>
+        <div class="step-tex">
+          <h3>Creation and Placement</h3>
+          <p>A temporary veneer will be placed for your comfort while your permanent veneers are being created. Once they’re ready to go, your temporary veneers will be removed and the perfect permanent veneers will be permanently bonded in place. After some finishing touches and a quick polish, your smile will be ready to dazzle.</p>
+        </div>
+      </div>
+
+
+      <div class="step">
+        <div class="step-image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-veneers.svg" alt="Veneers Icon">
+        </div>
+        <div class="step-tex">
+          <h3>Caring for Your Veneers</h3>
+          <p>When you depart with your new veneers, you’ll be given detailed instructions on how to best care for them. Your new veneers will look and feel like natural teeth, and you must take care of them like you would your natural teeth. Brushing and flossing twice a day and routine cleanings and checkups are highly recommended! With proper care, your veneers will last ten years or more.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div>
+        <h2>Cost of Invisalign in Toronto</h2>
+        <p>The out-of-pocket cost for a dental veneer can vary widely from patient to patient. With a typical insurance plan, a single veneer averages out to about $200 to $600+. Without insurance, a reasonable ball-park figure for a veneer would be about $800 to $1200 and up.</p>
+        <p>So what goes into determining the cost of veneers?</p>
+        <p>The number of veneers that are needed.</p>
+        <p>The work that will be involved in the preparation and placement of the veneers.</p>
+        <p>The type of veneers that are used.</p>
+        <p>Your vision for your smile.</p>
+        <p>Remember, no dental practice can provide an accurate quote over the phone. Ultimately, your needs are as unique as your smile. It’s important to speak with a dentist and undergo an oral exam to find out all your treatment options and to receive an accurate quote. If you have dental insurance, we would be happy to supply you with a quote to submit to them so you can find out your out-of-pocket costs before you make a decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
     <div class="container faq-container">
       <div>
         <div class="desktop text-centered">
@@ -94,7 +150,7 @@ get_header();
         <div class="cta-text">
           <div>
             <h2>Contact us today</h2>
-            <h3 class="paragrah-title">to schedule an initial consultation & exam.</h3>
+            <h3 class="paragraph-title">to schedule an initial consultation & exam.</h3>
           </div>
           <p>Your consultation will include an examination of everything from your teeth, gums and soft tissues to the shape and condition of your bite. Generally, we want to see how your whole mouth looks and functions. Before we plan your treatment we want to know everything about the health and aesthetic of your smile, and, most importantly, what you want to achieve so we can help you get there.</p>
           <a href="#" class="button button-primary">Book a Consultation</a>
@@ -136,7 +192,7 @@ get_header();
           </div>
         </div>
         <div class="location-map">
-          <?php echo do_shortcode('[clinic_location name="Wellington Dentistry" width="100%" height="400px"]'); ?>
+          <?php echo do_shortcode('[clinic_location name="Wellington Dentistry" width="100%" height="420px"]'); ?>
         </div>
       </div>
   </section>
