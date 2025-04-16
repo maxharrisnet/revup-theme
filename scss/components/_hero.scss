@@ -3,11 +3,11 @@
 .hero {
 	.hero-container {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 		gap: 1.5rem;
 		max-width: 100%;
 
-		@container (min-width: #{$breakpoint-md}) {
+		@container (min-width: #{$breakpoint-lg}) {
 			grid-template-columns: 2fr 2fr;
 			justify-items: flex-end;
 		}
@@ -19,10 +19,22 @@
 
 			&.text-container {
 				order: -1;
-				max-width: 70%;
+				padding: $spacing-xxl $spacing-lg;
+
+				@container (min-width: #{$breakpoint-xl}) {
+					max-width: 70%;
+					justify-content: center;
+					align-items: flex-start;
+					padding: 0;
+				}
 
 				.hero-icon {
 					width: 200px;
+					margin: 0 auto;
+
+					@container (min-width: #{$breakpoint-xl}) {
+						margin: 0;
+					}
 				}
 			}
 

@@ -4,7 +4,7 @@ body {
 	padding-top: $header-height;
 	container-type: inline-size;
 
-	@media (min-width: #{$container-md}) {
+	@media (min-width: #{$container-lg}) {
 		padding-top: $header-height-lg;
 	}
 }
@@ -36,7 +36,7 @@ header.main-header {
 				height: 100%;
 			}
 
-			@container (min-width: #{$container-md}) {
+			@container (min-width: #{$container-lg}) {
 				display: block;
 			}
 		}
@@ -48,8 +48,6 @@ header.main-header {
 }
 
 .hamburger-menu {
-	display: flex;
-	flex-flow: column;
 	background: none;
 	border: none;
 	box-shadow: none;
@@ -58,6 +56,7 @@ header.main-header {
 	height: 18px;
 	position: relative;
 	padding: 0;
+	align-self: flex-start;
 	z-index: 1100;
 
 	span {
@@ -89,7 +88,7 @@ header.main-header {
 		}
 	}
 
-	@media (min-width: #{$container-md}) {
+	@media (min-width: #{$container-lg}) {
 		display: none;
 	}
 }
@@ -132,7 +131,7 @@ header.main-header {
 		transform: translateX(0);
 	}
 
-	@media (min-width: #{$container-md}) {
+	@media (min-width: #{$container-lg}) {
 		display: block;
 		position: static;
 		transform: none;

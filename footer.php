@@ -78,7 +78,7 @@
     <hr />
     <div class="subfooter">
       <div>
-        <p> &copy; <?php echo date('Y'); ?> All Rights Reserved</p>
+        <p><?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?> All Rights Reserved</p>
       </div>
       <div>
         <span>Powered By</span>

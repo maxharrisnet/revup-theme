@@ -5,7 +5,7 @@ footer.main-footer {
 		display: flex;
 		flex-direction: column;
 
-		@container (min-width: $container-md) {
+		@container (min-width: $container-lg) {
 			justify-content: space-between;
 		}
 
@@ -21,7 +21,7 @@ footer.main-footer {
 			margin-bottom: 10px;
 		}
 
-		@container (min-width: #{$container-md}) {
+		@container (min-width: #{$container-lg}) {
 			.footer-mobile-nav {
 				display: none;
 			}
@@ -45,7 +45,7 @@ footer.main-footer {
 		.footer-subnav-column-container {
 			display: none;
 
-			@container (min-width: #{$container-md}) {
+			@container (min-width: #{$container-lg}) {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
 				justify-content: space-between;

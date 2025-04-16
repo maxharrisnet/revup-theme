@@ -6,7 +6,7 @@
 	padding: $spacing-lg $spacing-md;
 	width: 100%;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		flex-direction: row;
 		max-width: $container-width;
 		padding-top: $spacing-xxxl;
@@ -15,7 +15,7 @@
 	}
 
 	&.column {
-		@container (min-width: #{$container-md}) {
+		@container (min-width: #{$container-lg}) {
 			flex-direction: column;
 		}
 	}
@@ -25,7 +25,7 @@
 	background-color: $white;
 	// padding: $spacing-xl;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		// padding: $spacing-xxxl;
 	}
 
@@ -33,7 +33,7 @@
 		> div {
 			flex: 1;
 
-			@container (min-width: #{$container-md}) {
+			@container (min-width: #{$container-lg}) {
 				flex: 0 0 50%;
 			}
 		}
@@ -75,7 +75,7 @@
 	width: 100%;
 	padding: $spacing-lg;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		flex-direction: row;
 		gap: $spacing-lg;
 		padding: $spacing-xxl;
@@ -84,7 +84,7 @@
 	.step-image {
 		flex: 0 0 auto;
 
-		@container (min-width: #{$container-md}) {
+		@container (min-width: #{$container-lg}) {
 			flex: 0 0 15%;
 		}
 	}
@@ -112,7 +112,11 @@ section {
 		z-index: 10;
 		position: relative;
 
-		@container (min-width: #{$container-md}) {
+		p {
+			margin-bottom: $spacing-lg;
+		}
+
+		@container (min-width: #{$container-lg}) {
 			flex-flow: row;
 		}
 	}
@@ -122,10 +126,18 @@ section {
 		padding: $spacing-lg;
 		border-radius: $border-radius-sm;
 
-		@container (min-width: #{$container-md}) {
+		@container (min-width: #{$container-lg}) {
 			padding: $spacing-xxl;
 		}
 	}
+}
+
+.section-centered {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 hr {
@@ -134,7 +146,7 @@ hr {
 	background-color: $border-color;
 	margin: $spacing-lg 0;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		// margin: $spacing-xxl 0;
 	}
 }
@@ -142,7 +154,7 @@ hr {
 .desktop {
 	display: none;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		display: block;
 	}
 }
@@ -150,7 +162,7 @@ hr {
 .mobile {
 	display: block;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		display: none;
 	}
 }

@@ -15,8 +15,9 @@
 			display: flex;
 			flex-direction: column;
 			gap: $spacing-lg;
+			padding: $spacing-xl 0;
 
-			@container (min-width: #{$container-md}) {
+			@container (min-width: #{$container-lg}) {
 				flex-flow: row wrap;
 				gap: $spacing-xl;
 			}
@@ -28,7 +29,7 @@
 				box-shadow: $drop-shadow;
 				overflow: hidden;
 
-				@container (min-width: #{$container-md}) {
+				@container (min-width: #{$container-lg}) {
 					flex: 1 1 48%;
 					background-color: transparent;
 					box-shadow: none;
@@ -50,7 +51,7 @@
 					cursor: pointer;
 					flex: 1 1 48%;
 
-					@container (min-width: #{$container-md}) {
+					@container (min-width: #{$container-lg}) {
 						padding: 0;
 					}
 
@@ -62,7 +63,7 @@
 				.faq-answer {
 					padding: $spacing-md;
 
-					@container (min-width: #{$container-md}) {
+					@container (min-width: #{$container-lg}) {
 						padding: 0;
 					}
 

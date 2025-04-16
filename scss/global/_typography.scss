@@ -13,9 +13,14 @@ main {
 h1 {
 	font-family: $font-heading;
 	font-weight: $font-weight-light;
-	font-size: $font-size-jumbo;
+	font-size: $font-size-xxl;
 	line-height: $line-height-xl;
 	letter-spacing: $letter-spacing-tight;
+
+	@container (min-width: #{$container-lg}) {
+		font-size: $font-size-jumbo;
+		line-height: $line-height-lg;
+	}
 }
 
 h2 {
@@ -47,7 +52,7 @@ h4 {
 	padding: $spacing-xxl;
 	gap: $spacing-lg;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		text-align: left;
 	}
 }
@@ -99,7 +104,7 @@ details {
 				transform: rotate(90deg);
 			}
 
-			@container (min-width: #{$container-md}) {
+			@container (min-width: #{$container-lg}) {
 				display: none;
 			}
 		}
@@ -120,7 +125,7 @@ nav ul {
 	padding: $spacing-md 0;
 	justify-content: space-between;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		flex-direction: row;
 	}
 
@@ -156,7 +161,7 @@ nav ul {
 	text-align: center;
 	gap: $spacing-lg;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		text-align: left;
 	}
 }
@@ -168,12 +173,12 @@ nav ul {
 	text-align: center;
 	gap: $spacing-lg;
 
-	@container (min-width: #{$container-md}) {
+	@container (min-width: #{$container-lg}) {
 		text-align: left;
 	}
 }
 
-@container (min-width: #{$container-md}) {
+@container (min-width: #{$container-lg}) {
 	main {
 		text-align: left;
 

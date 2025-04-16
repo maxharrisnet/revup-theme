@@ -20,8 +20,9 @@ get_header();
     <div class="hero-container">
       <div class="text-container">
         <img class="hero-icon" src=" <?php echo get_template_directory_uri(); ?>/assets/images/content/smile@2x.png" alt="Dental Implants Icon">
-        <h1>Dental Implants</h1>
-        <h3 class="subheading">in Toronto</h3>
+        <h1 class="desktop">Dental Implants</h1>
+        <h3 class="subheading desktop">in Toronto</h3>
+        <h2 class="mobile">Dental Implants in Toronto</h2>
         <p>An Implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help restore the function of your teeth, look good and feel natural.</p>
         <div class="button-wrapper">
           <a href="#" class="button button-secondary">
@@ -124,8 +125,8 @@ get_header();
             <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
           </a>
           <a href="#" class="button button-primary">
-            <span>Call 416-123-4567/span>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-phone.svg" alt="Phone Icon" aria-hidden></a>
+            <span>Call 416-123-4567</span>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-phone.svg" alt="Phone Icon" aria-hidden></a>
           </a>
         </div>
       </div>
@@ -217,7 +218,7 @@ get_header();
   <section>
     <div class="container">
       <div>
-        <div class="heading">
+        <div class="heading-wrapper">
           <h2>Cost of Invisalign in Toronto</h2>
         </div>
         <p>The out-of-pocket cost for a dental veneer can vary widely from patient to patient. With a typical insurance plan, a single veneer averages out to about $200 to $600+. Without insurance, a reasonable ball-park figure for a veneer would be about $800 to $1200 and up.</p>
@@ -234,10 +235,11 @@ get_header();
   <section class="faq-section">
     <div class="container faq-container">
       <div>
-        <div class="desktop heading-wrapper">
-          <h2>Frequently Asked Questions</h2>
+        <div class=" heading-wrapper">
+          <h2><span class="desktop">Frequently Asked Questions</span><span class="mobile">FAq's</span></h2>
           <p>Do you still have some questions for us? No worries; we’re breaking down some of the most frequently asked questions about dental veneers.</p>
         </div>
+        <p>The out-of-pocket cost for a dental veneer can vary widely from patient to patient. With a typical insurance plan, a single veneer averages out to about $200 to $600+. Without insurance, a reasonable ball-park figure for a veneer would be about $800 to $1200 and up.</p>
         <div class="mobile text-centered">
           <h2>FAQ's</h2>
         </div>
@@ -274,9 +276,9 @@ get_header();
   <section class="cta-section">
     <img class="section-background-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/content/cta-bg.jpg" alt="CTA Background Image" loading="lazy" aria-hidden>
     <div class="container">
-      <div class="cta-body">
-        <div class="cta-text">
-          <div>
+      <div class="cta-body ">
+        <div class="cta-text section-centered">
+          <div class="heading-wrapper">
             <h2>Request an Appointment</h2>
             <h3 class="paragraph-title">to schedule an initial consultation & exam.</h3>
           </div>
