@@ -109,6 +109,47 @@ get_header();
       </div>
     </div>
   </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="text-container">
+        <h2>A New Life With Dental Implants Awaits!</h2>
+        <p>Give us a call to schedule a consultation in office so that we can discuss your options for treatment. Helping you achieve a gorgeous and healthy smile is always our number one priority.</p>
+      </div>
+      <div class="cta-content">
+        <h3>Start Today By Booking A Consultation</h3>
+        <div class="button-wrapper">
+          <a href="#" class="button button-primary">
+            <span>Request a Consultation</span>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
+          </a>
+          <a href="#" class="button button-primary">
+            <span>Call 416-123-4567/span>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-phone.svg" alt="Phone Icon" aria-hidden></a>
+          </a>
+        </div>
+      </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="text-container">
+        <h2>How It Feels</h2>
+        <p>A restoration is the “false tooth” that covers the implant. The implant is not visible when you smile, but the restoration that covers it is what makes it look like you have a new tooth.</p>
+        <p>Although having a metal implant inserted into the bone of your mouth sounds painful, the procedure is far more comfortable than you might expect.</p>
+        <p>We will numb your mouth with a mild anesthetic so that you don't feel any pain during the surgery. Advanced dental technology allows us to place implants quickly, accurately, and conservatively. This means less discomfort and downtime for you during recovery.</p>
+        <p>Some implant patients report feeling bored and even sleepy during the brief half hour it takes to place their implant. The most uncomfortable part for you may be having to hold your mouth open for a few minutes at a time, but that's all.</p>
+        <p>It is normal to experience some swelling, discomfort, and even bruising in the next several hours after the procedure. The pain is mild and very easy to manage, however. We will give you specific instructions so that you can start minimizing the discomfort before the anesthetic wears off. Your surgical implant site should start feeling better within a week.</p>
+        <p>It might help you to know that dental implants have a success rate of nearly 95%. Getting an implant is one of the safest and most predictable procedures in dentistry.</p>
+      </div>
+      <div class="section-image">
+        <div class="image-container">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/Invisalign_hero1-4.png" alt="Benefits of Dental Implants" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container column">
       <div class="heading-wrapper">
