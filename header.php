@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
     <div class="container header-container">
       <div class="logo">
         <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/tomken-logo@2x.png" alt="<?php bloginfo('name'); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wellington-dentistry-logo.png" alt="<?php bloginfo('name'); ?>">
         </a>
       </div>
       <div class="mobile">

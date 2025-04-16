@@ -38,7 +38,7 @@ $font-size-xxs: 14px; // Extra extra small (copyright)
 // Line height variables
 $line-height-xl: 54px; //  h1
 $line-height-lg: 42px; //  h2
-$line-height-md: 35px;
+$line-height-md: 34px; // question
 $line-height-body: 28px; // paragraph, alt h3, time
 $line-height-sm: 24px; // address
 $line-height-xs: 20px; // Extra small (footer links copyright links)
@@ -74,8 +74,8 @@ $spacing-sm: 8px; // Small
 $spacing-md: 15px; // Medium
 $spacing-lg: 24px; // Large
 $spacing-xl: 32px; // Extra large
-$spacing-xxl: 40px; // Extra extra large
-$spacing-xxxl: 48px; // Extra extra extra large
+$spacing-xxl: 60px; // ?
+$spacing-xxxl: 80px; // Extra extra extra large
 
 // Breakpoint variables mobile-first
 $breakpoint-xs: 375px; // Phone

@@ -26,8 +26,8 @@
 			flex-flow: column;
 			gap: $spacing-lg;
 
-			.button {
-				display: inline-block;
+			h2 {
+				font-weight: 300;
 			}
 		}
 	}
@@ -39,7 +39,7 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	padding: $spacing-lg;
+	padding: $spacing-xxl;
 
 	@container (min-width: #{$container-md}) {
 		flex-direction: row;

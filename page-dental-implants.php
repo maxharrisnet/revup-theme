@@ -19,12 +19,20 @@ get_header();
   <section class="hero">
     <div class="hero-container">
       <div class="text-container">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/smile@2x.png" alt="Dental Implants Icon">
+        <img class="hero-icon" src=" <?php echo get_template_directory_uri(); ?>/assets/images/content/smile@2x.png" alt="Dental Implants Icon">
         <h1>Dental Implants</h1>
         <h3 class="subheading">in Toronto</h3>
         <p>An Implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help restore the function of your teeth, look good and feel natural.</p>
-        <a href="#" class="button button-secondary">Request An Appointment</a>
-        <a href="#" class="button button-primary">Call (905) 848 2250</a>
+        <div class="button-wrapper">
+          <a href="#" class="button button-secondary">
+            <span>Request An Appointment</span>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
+          </a>
+          <a href="#" class="button button-primary">
+            <span>Call (905) 848 2250</span>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-phone.svg" alt="Phone Icon" aria-hidden></a>
+          </a>
+        </div>
       </div>
       <div class="image-container">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/dental-implants-hero.png" alt="Dental Implants">
@@ -51,9 +59,10 @@ get_header();
 
   <section>
     <div class="container column">
-      <h2> What To Expect On Your Dental Implant Treatment Journey</h2>
-      <p>The actual implant placement process is much more comfortable than you might imagine.</p>
-
+      <div class="heading-wrapper">
+        <h2> What To Expect On Your Dental Implant Treatment Journey</h2>
+        <p>The actual implant placement process is much more comfortable than you might imagine.</p>
+      </div>
       <div class="step">
         <div class="step-image">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-dental-chair.svg" alt="Dental Chair Icon">
@@ -89,10 +98,33 @@ get_header();
     </div>
   </section>
 
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-body">
+        <div class="cta-image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/dental-chair.svg" alt="Contact Us">
+        </div>
+        <div class="cta-text">
+          <div>
+            <h2>Contact us today</h2>
+            <h3 class="paragraph-title">to schedule an initial consultation & exam.</h3>
+          </div>
+          <p>Your consultation will include an examination of everything from your teeth, gums and soft tissues to the shape and condition of your bite. Generally, we want to see how your whole mouth looks and functions. Before we plan your treatment we want to know everything about the health and aesthetic of your smile, and, most importantly, what you want to achieve so we can help you get there.</p>
+          <a href="#" class="button button-primary">
+            <span>Book a Consultation</span>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container">
       <div>
-        <h2>Cost of Invisalign in Toronto</h2>
+        <div class="heading">
+          <h2>Cost of Invisalign in Toronto</h2>
+        </div>
         <p>The out-of-pocket cost for a dental veneer can vary widely from patient to patient. With a typical insurance plan, a single veneer averages out to about $200 to $600+. Without insurance, a reasonable ball-park figure for a veneer would be about $800 to $1200 and up.</p>
         <p>So what goes into determining the cost of veneers?</p>
         <p>The number of veneers that are needed.</p>
@@ -107,7 +139,7 @@ get_header();
   <section class="faq-section">
     <div class="container faq-container">
       <div>
-        <div class="desktop text-centered">
+        <div class="desktop heading-wrapper">
           <h2>Frequently Asked Questions</h2>
           <p>Do you still have some questions for us? No worries; we’re breaking down some of the most frequently asked questions about dental veneers.</p>
         </div>
@@ -135,25 +167,36 @@ get_header();
         </div>
         <div class="desktop inline-cta ">
           <h4>Have a Different Question?</h4>
-          <a href="#" class="button ">Ask our Doctor</a>
+          <a href="#" class="button ">
+            <span>Ask our Doctor</span>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <section class="cta-section">
+    <img class="section-background-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/content/cta-bg.jpg" alt="CTA Background Image" loading="lazy" aria-hidden>
     <div class="container">
       <div class="cta-body">
-        <div class="cta-image">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/dental-chair.svg" alt="Contact Us">
-        </div>
         <div class="cta-text">
           <div>
-            <h2>Contact us today</h2>
+            <h2>Request an Appointment</h2>
             <h3 class="paragraph-title">to schedule an initial consultation & exam.</h3>
           </div>
           <p>Your consultation will include an examination of everything from your teeth, gums and soft tissues to the shape and condition of your bite. Generally, we want to see how your whole mouth looks and functions. Before we plan your treatment we want to know everything about the health and aesthetic of your smile, and, most importantly, what you want to achieve so we can help you get there.</p>
-          <a href="#" class="button button-primary">Book a Consultation</a>
+
+          <div class="button-wrapper">
+            <a href="#" class="button button-primary">
+              <span>Request An Appointment</span>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mouse.svg" alt="Mouse Pointer Icon" aria-hidden></a>
+            </a>
+            <a href="#" class="button button-primary">
+              <span>Call (905) 848 2250</span>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-phone.svg" alt="Phone Icon" aria-hidden></a>
+            </a>
+          </div>
         </div>
       </div>
     </div>

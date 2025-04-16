@@ -3,23 +3,25 @@
 button,
 a.button,
 .button a {
-	display: block;
+	display: flex;
 	font-family: $font-heading;
 	font-weight: 700;
-	line-height: 21px;
+	font-size: $font-size-sm;
 	letter-spacing: $letter-spacing-tight;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	// vertical-align: middle;
 	border-radius: $border-radius-xl;
 	border: 2px solid $secondary-color;
 	box-shadow: $drop-shadow-sm;
+	gap: $spacing-sm;
 	padding: $spacing-sm $spacing-md;
 	width: auto;
 	transition: all $transition;
 	cursor: pointer;
 
 	@container (min-width: #{$container-md}) {
-		display: inline-block;
 		border-radius: $border-radius;
 	}
 
@@ -50,5 +52,20 @@ a.button-secondary {
 		background-color: $tertiary-color;
 		border-color: $tertiary-color;
 		color: $white;
+	}
+
+	svg {
+		fill: $white;
+		color: $white;
+	}
+}
+
+.button-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-sm;
+
+	@container (min-width: #{$container-md}) {
+		flex-direction: row;
 	}
 }

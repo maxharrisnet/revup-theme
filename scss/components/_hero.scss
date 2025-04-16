@@ -3,17 +3,27 @@
 .hero {
 	.hero-container {
 		display: grid;
-		grid-template-columns: 1fr; // Single column on mobile
+		grid-template-columns: 1fr 1fr;
 		gap: 1.5rem;
 		max-width: 100%;
 
-		@media (min-width: #{$breakpoint-md}) {
-			grid-template-columns: 1fr 1fr;
+		@container (min-width: #{$breakpoint-md}) {
+			grid-template-columns: 2fr 2fr;
+			justify-items: flex-end;
 		}
 
 		> div {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+
 			&.text-container {
 				order: -1;
+				max-width: 70%;
+
+				.hero-icon {
+					width: 200px;
+				}
 			}
 
 			&.image-container {
