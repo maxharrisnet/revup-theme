@@ -20,6 +20,53 @@
 		flex-direction: column;
 		gap: $spacing-lg;
 		padding: $spacing-lg;
+
+		.detail-wrapper {
+			display: flex;
+			flex-direction: row;
+			padding: $spacing-sm 0;
+			gap: $spacing-md;
+
+			&.clinic-icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				background-color: $background-color-dark;
+				border-radius: $border-radius;
+				box-shadow: $drop-shadow-sm;
+
+				svg {
+					fill: $white;
+					color: $white;
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+			&.clinic-name {
+				font-family: $font-heading;
+				font-size: $font-size-lg;
+				color: $tertiary-color;
+				text-decoration: none;
+			}
+
+			&.clinic-address {
+				font-family: $font-body;
+				font-size: $font-size-sm;
+				color: $border-color;
+			}
+
+			.location-hours ul li {
+				display: inline-block;
+				padding: $spacing-sm 0;
+			}
+		}
+
+		hr {
+			margin: 0;
+		}
 	}
 
 	.location-map {

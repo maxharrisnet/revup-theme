@@ -67,13 +67,30 @@ get_header();
       </div>
       <div class="section-image">
         <div class="image-container">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/benefits.png" alt="Benefits of Dental Implants" loading="lazy">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/Invisalign_hero1-1.png" alt="Benefits of Dental Implants" loading="lazy">
         </div>
       </div>
     </div>
-
   </section>
-
+  <section class="feature-section">
+    <div class="container">
+      <div class="section-image">
+        <div class="image-container">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/Invisalign_hero1-2.png" alt="Benefits of Dental Implants" loading="lazy">
+        </div>
+      </div>-
+      <div class="text-container">
+        <h2>The Benefits Of Dental Implants</h2>
+        <p> Losing a tooth can be devastating. A missing tooth can make us feel self-conscious about our smile and may lead to a variety of health problems. Gaps can make your bite feel uncomfortable, cause difficulties eating the food you love and may lead to bone loss or shifting teeth. </p>
+        <div class="section-highlight">
+          <p> Restore your natural appearance Dental implants look and feel like your own teeth. They become permanent, “perfect” teeth as they are custom made to blend in with your smile. Implants look natural because they are sized, shaped and coloured to match your unique bite and natural enamel colour.</p>
+          <p> Feel confident in your comfort When a dental implant is placed your jaw bone actually fuses with the titanium post as it heals. A crown or bridge can be permanently affixed to the post or the implant may be used to secure implant-supported dentures but one thing is certain: That dental implant is not moving. Laugh, smile and eat your favourite foods. Shifting teeth or sudden pain won’t even cross your mind.</p>
+          <p> Improve bone strengthWhen teeth are lost, the bone that supports those teeth can begin to atrophy and weaken over time. Dental Implants stimulate new bone growth around the implant, strengthening the bone structure.</p>
+        </div>
+        <p>Dental implants are a long-term solution that feels natural and lasts decades with proper oral hygiene.</p>
+      </div>
+    </div>
+  </section>
   <section class="feature-section">
     <div class="container">
       <div class="text-container">
@@ -87,27 +104,11 @@ get_header();
       </div>
       <div class="section-image">
         <div class="image-container">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/benefits.png" alt="Benefits of Dental Implants" loading="lazy">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/Invisalign_hero1-3.png" alt="Benefits of Dental Implants" loading="lazy">
         </div>
       </div>
     </div>
   </section>
-
-  <section class="feature-section">
-    <div class="container">
-      <div class="section-image">
-        <div class="image-container">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/content/benefits.png" alt="Benefits of Dental Implants" loading="lazy">
-        </div>
-      </div>-
-      <div class="text-container">
-        <h2>What Are Dental Implants?</h2>
-        <p> An implant is a small metal screw that replaces an entire tooth. In a brief surgical procedure, the dentist inserts an implant into the bone beneath your gums right in the spot where a tooth should be. The implant acts like a natural tooth root and is finished off with a restoration such as a dental crown to help it look and feel just like a real tooth.</p>
-        <p> Getting dental implants is a big deal. You think you might like an implant, but you aren’t sure what to expect. We explain everything here so that you can make an informed decision about your dental treatment.</p>
-      </div>
-    </div>
-  </section>
-
   <section>
     <div class="container column">
       <div class="heading-wrapper">
@@ -260,9 +261,18 @@ get_header();
       <div class="location-wrapper">
         <div class="location-details">
           <address>
-            <p>310 Wellington Rd, London, Ontario, Canada, N6C 4P4</p>
-            <p>226-781-7262</p>
-            <p><a href="mailto:info@wellingtondentistry.ca">info@wellingtondentistry.ca</a></p>
+            <div class="detail-wrapper">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-location.svg" alt="Location Icon" aria-hidden>
+              <p>310 Wellington Rd, London, Ontario, Canada, N6C 4P4</p>
+            </div>
+            <div class="detail-wrapper">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-phone.svg" alt="Phone Icon" aria-hidden>
+              <p>226-781-7262</p>
+            </div>
+            <div class="detail-wrapper">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-mail.svg" alt="Mail Icon" aria-hidden>
+              <p><a href="mailto:info@wellingtondentistry.ca">info@wellingtondentistry.ca</a></p>
+            </div>
           </address>
           <!--  social icons -->
           <div class=" social-icons">
@@ -274,21 +284,24 @@ get_header();
           </div>
           <hr />
           <!-- Schedule -->
-          <div class=Wellington Dentistry "location-hours">
+          <div class="location-hours">
             <h3>Office Hours</h3>
-            <ul>
-              <li>Monday: 10am-6pm</li>
-              <li>Tuesday: 11am-7pm</li>
-              <li>Wednesday: 10am-6pm</li>
-              <li>Thursday: 11am-7pm</li>
-              <li>Friday: 10am-3pm</li>
-              <li>Saturday: 10am-3pm</li>
-              <li>Sunday: Closed</li>
-            </ul>
+            <div class="detail-wrapper">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-clock.svg" alt="Clock Icon">
+              <ul>
+                <li>Monday: <time datetime="10:00-18:00">10am-6pm</time></li>
+                <li>Tuesday: <time datetime="11:00-19:00">11am-7pm</time></li>
+                <li>Wednesday: <time datetime="10:00-18:00">10am-6pm</time></li>
+                <li>Thursday: <time datetime="11:00-19:00">11am-7pm</time></li>
+                <li>Friday: <time datetime="10:00-15:00">10am-3pm</time></li>
+                <li>Saturday: <time datetime="10:00-15:00">10am-3pm</time></li>
+                <li>Sunday: <time datetime="00:00-00:00">Closed</time></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="location-map">
-          <?php echo do_shortcode('[clinic_location name="Wellington Dentistry" width="100%" height="420px"]'); ?>
+          <?php echo do_shortcode('[clinic_location name="Wellington Dentistry" width="100%" height="100%"]'); ?>
         </div>
       </div>
   </section>
